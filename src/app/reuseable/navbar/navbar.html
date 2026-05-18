@@ -1,1 +1,300 @@
-<p>navbar works!</p>
+<div class="top-marquee">
+    <marquee behavior="scroll" direction="left"> {{ marqueeText }} </marquee>
+</div>
+
+
+<!-- preloader start -->
+<div class="preloader" *ngIf="isLoading">
+    <div class="preloader-icon">
+        <img src="assets/logo/logo1.png" alt="loader image">
+    </div>
+</div>
+<!-- preloader end -->
+
+<!-- back to top start -->
+<button id="back-top" class="back-to-top" aria-label="back to top">
+    <i class="fa-solid fa-chevron-up"></i>
+</button>
+<!-- back to top end -->
+
+<!-- mouse cursor start -->
+<div class="mouse-cursor cursor-outer"></div>
+<div class="mouse-cursor cursor-inner"></div>
+<!-- mouse cursor end -->
+
+<!-- offcanvas sidebar start -->
+<div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvas-sidebar">
+    <div class="offcanvas-header">
+        <div class="offcanvas-logo">
+            <figure>
+                <img src="assets/logo/logo-white.png" alt="offcanvas logo">
+            </figure>
+            <div class="logo-shape">
+                <svg width="139" height="47" viewBox="0 0 139 47" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M139 0C138.711 0.5 138.62 0.560819 138.134 0.995492C134.537 4.21373 130.235 6.0193 125.503 6.78303C123.513 7.10529 121.47 7.20904 119.451 7.21345C118.343 7.21566 117.842 7.6218 117.394 8.55549C115.89 11.7075 114.065 14.6587 111.765 17.3229C107.182 22.6358 101.565 26.4743 95.0831 29.1496C88.9466 31.6836 83.0105 34.6016 77.7933 38.7557C76.2953 39.9477 74.8419 41.2257 73.5487 42.6273C72.2889 43.9981 71.2606 45.5763 70.1766 47C69.3398 45.8721 68.4962 44.5874 67.5057 43.422C63.5037 38.7094 58.3778 35.4492 52.9246 32.6945C49.1898 30.8073 45.2857 29.2511 41.5397 27.3837C33.0306 23.1413 26.7472 16.707 22.7453 8.12065C22.378 7.33485 22.0775 7.11633 21.0603 7.17372C14.0068 7.57324 7.46082 6.04358 1.79843 1.62016C1.16408 1.12351 0.598735 0.542995 0 0H139Z"
+                        fill="currentColor"></path>
+                </svg>
+            </div>
+        </div>
+        <button type="button" class="offcanvas-close bg-transparent" data-bs-dismiss="offcanvas" aria-label="Close"><i
+                class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="offcanvas-body">
+        <div class="mobile-menu">
+        </div>
+        <div class="offcanvas-about d-none d-xl-block">
+            <p>
+                Shree Shakti Mandir UK offers a peaceful spiritual environment where devotees can connect with
+                Maa Shakti through prayers, rituals, and cultural activities that inspire faith and devotion.
+            </p>
+        </div>
+        <div class="offcanvas-contact">
+            <div class="widget widget-contact">
+                <div class="widget-title">
+                    <h3>Contact Info</h3>
+                </div>
+                <div class="widget-content">
+                    <div class="offcanvas-cta-item">
+                        <div class="offcanvas-cta-list">
+                            <div class="offcanvas-cta-icon">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div class="offcanvas-cta-content">
+                                <p>123 Serenity Lane, Suite 101, Hometown, CA 12345</p>
+                            </div>
+                        </div>
+                        <div class="offcanvas-cta-list">
+                            <div class="offcanvas-cta-icon">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div class="offcanvas-cta-content">
+                                <a href="mailto:info@example.com">info@example.com</a>
+                            </div>
+                        </div>
+                        <div class="offcanvas-cta-list">
+                            <div class="offcanvas-cta-icon">
+                                <i class="fa-solid fa-phone-volume"></i>
+                            </div>
+                            <div class="offcanvas-cta-content">
+                                <a href="tel:123446788">+1 234 467 88</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="offcanvas-button-wapper">
+            <a href="#" class="theme-button style-1" aria-label="Donate Now">
+                <span data-text="Donate Now">Donate Now</span>
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+
+        <div class="offcanvas-social">
+            <div class="widget widget-social-media">
+                <div class="widget-content">
+                    <ul class="social-icon">
+                        <li>
+                            <a href="#" aria-label="instagram"><i class="fa-brands fa-instagram"></i></a>
+                        </li>
+                        <li>
+                            <a href="#" aria-label="facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        </li>
+                        <li>
+                            <a href="#" aria-label="twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                        </li>
+                        <li>
+                            <a href="#" aria-label="pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- header start -->
+<header class="header header-1 mt-4">
+    <div class="header-lower">
+        <div class="container">
+            <div class="row align-items-center justify-content-between g-0">
+                <div class="col-12">
+                    <!-- header content start -->
+                    <div class="header-content d-flex align-items-center justify-content-between">
+                        <div class="header-left">
+                            <div class="logo-box">
+                                <div class="logo">
+                                    <a href="#">
+                                        <figure>
+                                            <img src="assets/logo/logo-white.png" alt="header logo">
+                                        </figure>
+                                    </a>
+                                    <div class="logo-shape">
+                                        <svg width="139" height="47" viewBox="0 0 139 47" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M139 0C138.711 0.5 138.62 0.560819 138.134 0.995492C134.537 4.21373 130.235 6.0193 125.503 6.78303C123.513 7.10529 121.47 7.20904 119.451 7.21345C118.343 7.21566 117.842 7.6218 117.394 8.55549C115.89 11.7075 114.065 14.6587 111.765 17.3229C107.182 22.6358 101.565 26.4743 95.0831 29.1496C88.9466 31.6836 83.0105 34.6016 77.7933 38.7557C76.2953 39.9477 74.8419 41.2257 73.5487 42.6273C72.2889 43.9981 71.2606 45.5763 70.1766 47C69.3398 45.8721 68.4962 44.5874 67.5057 43.422C63.5037 38.7094 58.3778 35.4492 52.9246 32.6945C49.1898 30.8073 45.2857 29.2511 41.5397 27.3837C33.0306 23.1413 26.7472 16.707 22.7453 8.12065C22.378 7.33485 22.0775 7.11633 21.0603 7.17372C14.0068 7.57324 7.46082 6.04358 1.79843 1.62016C1.16408 1.12351 0.598735 0.542995 0 0H139Z"
+                                                fill="currentColor"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- header navigation start -->
+                        <div class="header-navigation d-flex align-items-center">
+                            <!-- main menu -->
+                            <div class="main-menu">
+                                <nav id="mobile-menu">
+                                    <ul>
+                                        <li class="menu-thumb">
+                                            <a class="nav-link" href="#">Home</a>
+
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">About Us</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">Volunteering</a>
+                                            <!-- <ul class="submenu">
+                                                <li><a href="#">Donation</a></li>
+                                                <li class="has-dropdown">
+                                                    <a href="#">Scholars <i class="fa-solid fa-chevron-right"></i></a>
+                                                    <ul class="submenu">
+                                                        <li><a href="#">Scholars</a></li>
+                                                        <li><a href="#">Scholars Details</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="has-dropdown">
+                                                    <a href="#">Services <i class="fa-solid fa-chevron-right"></i></a>
+                                                    <ul class="submenu">
+                                                        <li><a href="#">Services</a></li>
+                                                        <li><a href="#">Services Details</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="has-dropdown">
+                                                    <a href="#">Gallery <i class="fa-solid fa-chevron-right"></i></a>
+                                                    <ul class="submenu">
+                                                        <li><a href="#">Image Gallery</a></li>
+                                                        <li><a href="#">Video Gallery</a></li>
+                                                    </ul>
+                                                </li>
+
+                                            </ul> -->
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">Media<i class="fa-solid fa-angle-down"></i></a>
+                                            <ul class="submenu">
+                                                <li class="has-dropdown">
+                                                    <a href="#">Event <i class="fa-solid fa-chevron-right"></i></a>
+                                                    <ul class="submenu">
+                                                        <li><a href="#">Event List</a></li>
+                                                        <li><a href="#">Event Details</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="has-dropdown">
+                                                    <a href="#">Blog <i class="fa-solid fa-chevron-right"></i></a>
+                                                    <ul class="submenu">
+                                                        <li><a href="#">Blog List</a></li>
+                                                        <li><a href="#">Blog Details</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+
+                                        <!-- <li class="nav-item">
+                                            <a class="nav-link" href="#">Event<i class="fa-solid fa-angle-down"></i></a>
+                                            <ul class="submenu">
+
+                                                <li><a href="#">Event List</a></li>
+                                                <li><a href="#">Event Details</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">Blog <i
+                                                    class="fa-solid fa-chevron-down"></i></a>
+                                            <ul class="submenu">
+
+                                                <li><a href="#">Blog Standard</a></li>
+                                                <li><a href="#">Blog Details</a></li>
+                                            </ul>
+                                        </li> -->
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="contact.php">Contact Us</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <!-- header navigation end -->
+
+                        <!-- header right start -->
+                        <div class="header-right d-flex align-items-center gap-3">
+                            <!-- header call -->
+                            <div class="header-call">
+                                <div class="header-call-icon">
+                                    <i class="fa-solid fa-phone-volume"></i>
+                                </div>
+                                <div class="header-call-content">
+                                    <span>Call now</span>
+                                    <a href="tel:123446788">+1 234 467 88</a>
+                                </div>
+                            </div>
+
+                            <!-- button wapper -->
+                            <div class="button-wapper">
+                                <!-- header-search -->
+                                <div class="header-search">
+                                    <a href="" class="search-btn" aria-label="search">
+                                        <i class="fa-solid fa-magnifying-glass"></i>
+                                    </a>
+                                </div>
+                                <!-- header sidebar  -->
+                                <div class="header-sidebar">
+                                    <a class="sidebar-toggler" data-bs-toggle="offcanvas" href="#offcanvas-sidebar"
+                                        aria-label="sidebar toggler" role="button" aria-controls="offcanvas-sidebar">
+                                        <span></span>
+                                        <span></span>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- header button -->
+                            <div class="header-button">
+                                <a href="#" class="theme-button style-1" aria-label="Donate Now">
+                                    <span data-text="Donate Now">Donate Now</span>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- header lower end -->
+
+    <!-- search box start -->
+    <div id="search-box">
+        <span class="close">
+            <i class="fa-solid fa-xmark"></i>
+        </span>
+        <div class="search-wapper">
+            <form action="#" class="search-form" id="search-form">
+                <div class="input-group">
+                    <input type="text" id="searchs" name="search" placeholder="Type to search" autocomplete="off"
+                        required="required">
+                </div>
+                <button type="submit" class="search-submit-btn" data-text="search submit">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+    <!-- search box end -->
+</header>
+<!-- header end-->
