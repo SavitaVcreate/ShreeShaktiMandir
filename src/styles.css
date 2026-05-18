@@ -2569,8 +2569,8 @@ button:focus {
   -ms-transform: translateY(-50%);
   -o-transform: translateY(-50%);
   transform: translateY(-50%);
-  background: var(--primary-color)
-    url("../../assets/images/icon/icon-sub-heading.png") no-repeat;
+  /* background: var(--primary-color)
+    url("../../assets/images/icon/icon-sub-heading.png") no-repeat; */
   background-position: center;
   background-size: 10px;
   width: 30px;
@@ -2647,8 +2647,8 @@ button:focus {
   -ms-transform: translateY(-50%);
   -o-transform: translateY(-50%);
   transform: translateY(-50%);
-  background: var(--primary-color)
-    url("../../assets/images/icon/icon-sub-heading.png") no-repeat;
+  /* background: var(--primary-color)
+    url("../../assets/images/icon/icon-sub-heading.png") no-repeat; */
   background-position: center;
   background-size: 10px;
   width: 30px;
@@ -7920,8 +7920,8 @@ button:focus {
   background-color: var(--accent-color-one);
 }
 .page-church .section-title .sub-title::before {
-  background: var(--accent-one)
-    url("../../assets/images/icon/icon-sub-heading-church.png") no-repeat;
+  /* background: var(--accent-one)
+    url("../../assets/images/icon/icon-sub-heading-church.png") no-repeat; */
   background-position: center;
 }
 .page-church .theme-button.style-1 {
@@ -8295,8 +8295,8 @@ button:focus {
   background-color: var(--accent-color-two);
 }
 .page-mosque .section-title .sub-title::before {
-  background: var(--accent-two)
-    url("../../assets/images/icon/icon-sub-heading-mosque.png") no-repeat;
+  /* background: var(--accent-two)
+    url("../../assets/images/icon/icon-sub-heading-mosque.png") no-repeat; */
   background-position: center;
 }
 .page-mosque .theme-button.style-1 {
@@ -8410,8 +8410,8 @@ button:focus {
   .tab-content
   .pricing-list-box
   .pricing-item:hover {
-  background: var(--accent-color-two)
-    url("../../assets/images/pricing/bg-pricing.png") no-repeat;
+  /* background: var(--accent-color-two)
+    url("../../assets/images/pricing/bg-pricing.png") no-repeat; */
   background-position: center center;
   background-size: cover;
 }
@@ -14190,9 +14190,9 @@ button:focus {
 }
 
 .cta-section-1 {
-  background:
+  /* background:
     linear-gradient(270deg, rgba(32, 41, 110, 0) 0%, var(--black-color) 90%),
-    url("../../assets/images/cta/cta-bg-1-1.jpg") no-repeat;
+    url("../../assets/images/cta/cta-bg-1-1.jpg") no-repeat; */
   background-position: center center;
   background-size: cover;
   z-index: 1;
@@ -18664,8 +18664,8 @@ button:focus {
   margin-bottom: 5px;
 }
 .pricing-section .tab-content .pricing-list-box .pricing-item:hover {
-  background: var(--extra-color)
-    url("../../assets/images/pricing/bg-pricing.png") no-repeat;
+  /* background: var(--extra-color)
+    url("../../assets/images/pricing/bg-pricing.png") no-repeat; */
   background-position: center center;
   background-size: cover;
 }
