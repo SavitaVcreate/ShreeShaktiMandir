@@ -20,7 +20,8 @@ import { CommonModule } from '@angular/common';
 export class Navbar implements OnInit, AfterViewInit {
   isLoading: boolean = true;
   isSearchActive: boolean = false;
-  marqueeText: string = 'Jai Shree Shakti Mata |  जय श्री शक्ति माता ';
+  marqueeText: string =
+    'Jai Shree Shakti Mata ||  जय श्री शक्ति माता || Jai Shree Shakti Mata || जय श्री शक्ति माता  || Jai Shree Shakti Mata ||  जय श्री शक्ति माता';
   constructor(
     private renderer: Renderer2,
     private el: ElementRef,
