@@ -5717,6 +5717,14 @@ button:focus {
   display: flex;
   gap: 42px;
 }
+/* marque tag */
+.top-marquee {
+  background: #ad0707c7;
+  color: #fff;
+  padding: 10px 0;
+  font-size: 16px;
+  font-weight: 600;
+}
 @media (max-width: 1400px) {
   .header
     .header-lower
