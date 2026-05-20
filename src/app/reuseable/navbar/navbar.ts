@@ -6,47 +6,26 @@ import {
   HostListener,
   OnInit,
   ChangeDetectorRef,
+  ViewChild,
 } from '@angular/core';
 
 import { CommonModule } from '@angular/common';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterOutlet],
   templateUrl: './navbar.html',
   styleUrls: ['./navbar.css'],
 })
-export class Navbar implements OnInit, AfterViewInit {
-  isLoading: boolean = true;
+export class Navbar {
   isSearchActive: boolean = false;
-  marqueeText: string =
-    'Jai Shree Shakti Mata ||  जय श्री शक्ति माता || Jai Shree Shakti Mata || जय श्री शक्ति माता  || Jai Shree Shakti Mata ||  जय श्री शक्ति माता';
+
   constructor(
     private renderer: Renderer2,
     private el: ElementRef,
-    private cdr: ChangeDetectorRef,
   ) {}
-
-  // =========================
-  // Page Loader
-  // =========================
-
-  ngOnInit(): void {
-    setTimeout(() => {
-      this.isLoading = false;
-      this.cdr.detectChanges();
-    }, 2000);
-  }
-
-  preloader(): void {
-    window.addEventListener('load', () => {
-      setTimeout(() => {
-        this.isLoading = false;
-        this.cdr.detectChanges();
-      }, 100);
-    });
-  }
 
   // =========================
   // After View Init
@@ -110,7 +89,7 @@ export class Navbar implements OnInit, AfterViewInit {
   // =========================
 
   @HostListener('window:scroll', [])
-  onWindowScroll(): void {
+  onWindowScroll1(): void {
     const header = this.el.nativeElement.querySelector('.header .header-lower');
 
     if (window.scrollY > 250) {
