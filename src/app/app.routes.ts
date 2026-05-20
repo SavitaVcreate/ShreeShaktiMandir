@@ -9,12 +9,12 @@ export const routes: Routes = [
 //         .then(m => m.HomeComponent)
 //   },
 
-//   {
-//     path: 'about-us',
-//     loadComponent: () =>
-//       import('./pages/about-us/about-us.component')
-//         .then(m => m.AboutUsComponent)
-//   },
+  {
+    path: 'about-us',
+    loadComponent: () =>
+      import('./pages/aboutus/aboutus')
+        .then(m => m.Aboutus)
+  },
 
 //   {
 //     path: 'contact-us',
