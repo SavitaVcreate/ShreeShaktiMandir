@@ -1,22 +1,11 @@
-import {
-  AfterViewInit,
-  ChangeDetectorRef,
-  Component,
-  ElementRef,
-  HostListener,
-  OnInit,
-  Renderer2,
-  signal,
-  ViewChild,
-} from '@angular/core';
-
-import { Navbar } from './reuseable/navbar/navbar';
+import { AfterViewInit, ChangeDetectorRef, Component, ElementRef, HostListener, OnInit, Renderer2, signal, ViewChild } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { CommonModule } from '@angular/common';
+import { Footer } from './footer/footer/footer';
+import { Navbar } from './reuseable/navbar/navbar';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, CommonModule],
+  imports: [Navbar,],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
