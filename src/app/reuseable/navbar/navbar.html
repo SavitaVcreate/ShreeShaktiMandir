@@ -1,27 +1,3 @@
-<div class="top-marquee">
-    <marquee behavior="scroll" direction="left"> {{ marqueeText }} </marquee>
-</div>
-
-
-<!-- preloader start -->
-<div class="preloader" *ngIf="isLoading">
-    <div class="preloader-icon">
-        <img src="assets/logo/logo1.png" alt="loader image">
-    </div>
-</div>
-<!-- preloader end -->
-
-<!-- back to top start -->
-<button id="back-top" class="back-to-top" aria-label="back to top">
-    <i class="fa-solid fa-chevron-up"></i>
-</button>
-<!-- back to top end -->
-
-<!-- mouse cursor start -->
-<div class="mouse-cursor cursor-outer"></div>
-<div class="mouse-cursor cursor-inner"></div>
-<!-- mouse cursor end -->
-
 <!-- offcanvas sidebar start -->
 <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvas-sidebar">
     <div class="offcanvas-header">
@@ -298,3 +274,42 @@
     <!-- search box end -->
 </header>
 <!-- header end-->
+
+<!-- FLOATING SOCIAL SIDEBAR -->
+
+<div class="social-sidebar">
+
+    <a href="#" class="social-icon instagram" target="_blank">
+
+        <i class="fa-brands fa-instagram"></i>
+
+    </a>
+
+    <a href="#" class="social-icon facebook" target="_blank">
+
+        <i class="fa-brands fa-facebook-f"></i>
+
+    </a>
+
+    <a href="#" class="social-icon youtube" target="_blank">
+
+        <i class="fa-brands fa-youtube"></i>
+
+    </a>
+
+    <a href="#" class="social-icon twitter" target="_blank">
+
+        <i class="fa-brands fa-x-twitter"></i>
+
+    </a>
+
+    <a href="#" class="social-icon whatsapp" target="_blank">
+
+        <i class="fa-brands fa-whatsapp"></i>
+
+    </a>
+
+</div>
+
+
+<router-outlet></router-outlet>
