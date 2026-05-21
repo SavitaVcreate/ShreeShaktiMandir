@@ -6,11 +6,12 @@ import { Autoplay, Pagination } from 'swiper/modules';
 import { CommonModule } from '@angular/common';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { Footer } from '../../footer/footer/footer';
+import { RouterLink } from '@angular/router';
 
 Swiper.use([Autoplay, Pagination]);
 @Component({
   selector: 'app-home',
-  imports: [Header, CommonModule, Footer],
+  imports: [Header, CommonModule, Footer, RouterLink],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })
@@ -113,26 +114,5 @@ export class Home implements AfterViewInit {
         },
       });
     }
-
-    this.checkAnimation();
-  }
-
-  @HostListener('window:scroll', [])
-  onWindowScroll(): void {
-    this.checkAnimation();
-  }
-
-  checkAnimation(): void {
-    const elements = document.querySelectorAll('.fade-left, .fade-right, .fade-up');
-
-    elements.forEach((element: any) => {
-      const position = element.getBoundingClientRect().top;
-
-      const screenPosition = window.innerHeight / 1.2;
-
-      if (position < screenPosition) {
-        element.classList.add('active');
-      }
-    });
   }
 }

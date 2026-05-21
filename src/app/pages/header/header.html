@@ -12,7 +12,8 @@
         </div> -->
         <div class="hero-slider-container">
             <div class="hero-slide" *ngFor="let slide of slides; let i = index" [class.active]="i === currentIndex"
-                [style.background-image]="'url(' + slide + ')'"> </div>
+                [style.background-image]="'url(' + slide + ')'" [ngClass]="{ 'first-slide': i === 0 }"
+                [style.backgroundImage]="'url(' + slide + ')'"> </div>
         </div>
     </div>
     <!-- <div class="hero-slider">
@@ -45,11 +46,11 @@
 
                     <div class="hero-btns">
 
-                        <a href="#" class="theme-btn border-btn">
-                            Explore Temple
+                        <a routerLink="/contact" class="theme-btn border-btn">
+                            Contact Now
                         </a>
 
-                        <a href="#" class="theme-btn border-btn">
+                        <a routerLink="/donate" class="theme-btn border-btn">
                             Donate Now
                         </a>
 

@@ -10,12 +10,12 @@ import {
 } from '@angular/core';
 
 import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
+import { RouterOutlet, RouterLinkWithHref, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [CommonModule, RouterOutlet],
+  imports: [CommonModule, RouterOutlet, RouterLinkWithHref, RouterModule],
   templateUrl: './navbar.html',
   styleUrls: ['./navbar.css'],
 })

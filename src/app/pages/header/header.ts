@@ -1,10 +1,11 @@
 import { AfterViewInit, Component } from '@angular/core';
 import { Navbar } from '../../reuseable/navbar/navbar';
 import { CommonModule } from '@angular/common';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-header',
-  imports: [CommonModule, Navbar],
+  imports: [CommonModule, Navbar, RouterLink],
   templateUrl: './header.html',
   styleUrl: './header.css',
 })
