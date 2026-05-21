@@ -1,0 +1,27 @@
+.video-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 9999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+}
+
+.video-wrapper {
+  width: 90%;
+  max-width: 900px;
+}
+
+.video-close-btn {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+
+  color: #fff;
+  font-size: 45px;
+  cursor: pointer;
+}

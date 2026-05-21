@@ -88,14 +88,15 @@ export class Navbar {
   // Sticky Header
   // =========================
 
-  @HostListener('window:scroll', [])
-  onWindowScroll1(): void {
+  @HostListener('window:scroll', []) onWindowScroll1(): void {
     const header = this.el.nativeElement.querySelector('.header .header-lower');
-
     if (window.scrollY > 250) {
-      header?.classList.add('sticky');
+      header?.classList.add('sticky'); // add body padding
+      document.body.classList.add('sticky-padding');
     } else {
       header?.classList.remove('sticky');
+      // // remove body padding
+      document.body.classList.remove('sticky-padding');
     }
   }
 }

@@ -20,7 +20,7 @@ import { CommonModule } from '@angular/common';
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
-export class App implements OnInit, AfterViewInit {
+export class App implements OnInit {
   protected readonly title = signal('ShreeShaktiMandir');
   @ViewChild('krishnaAarti') audioPlayer!: ElementRef<HTMLAudioElement>;
 
@@ -37,9 +37,6 @@ export class App implements OnInit, AfterViewInit {
     private el: ElementRef,
     private cdr: ChangeDetectorRef,
   ) {}
-  ngAfterViewInit(): void {
-    throw new Error('Method not implemented.');
-  }
 
   // =========================
   // Page Loader

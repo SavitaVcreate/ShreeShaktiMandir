@@ -2445,8 +2445,7 @@ button:focus {
   -ms-transform: translateY(-50%);
   -o-transform: translateY(-50%);
   transform: translateY(-50%);
-  /* background: var(--primary-color)
-    url("../../assets/images/icon/icon-sub-heading.png") no-repeat; */
+  background: var(--primary-color) url('assets/icon/icon-sub-heading.png') no-repeat;
   background-position: center;
   background-size: 10px;
   width: 30px;
@@ -5730,11 +5729,7 @@ button:focus {
   display: flex;
   gap: 30px;
 }
-.header-content {
-  border-radius: 90px;
-  background-color: var(--extra-color);
-  padding: 10px;
-}
+
 @media (max-width: 1199px) {
   .header .header-lower .header-content .header-navigation {
     display: none !important;
@@ -6407,7 +6402,7 @@ button:focus {
 }
 .header-1 .header-lower {
   position: relative;
-  /* background-color: var(--extra-color); */
+  background-color: var(--extra-color);
 }
 .header-1 .header-lower .header-content {
   position: relative;
@@ -10899,6 +10894,53 @@ button:focus {
   transform: scale(1);
   opacity: 1;
 }
+/*  */
+.custom-image-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 9999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup-image {
+  max-width: 80%;
+  max-height: 80%;
+  border-radius: 10px;
+}
+
+.custom-image-modal .close-btn {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  color: #fff;
+  font-size: 45px;
+  cursor: pointer;
+}
+
+.custom-image-modal .nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #fff;
+  border: none;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  font-size: 25px;
+  border-radius: 50%;
+}
+
+.custom-image-modal .prev-btn {
+  left: 30px;
+}
+
+.custom-image-modal .next-btn {
+  right: 30px;
+}
 
 .video-gallery-item {
   margin-bottom: 30px;
@@ -13208,9 +13250,9 @@ button:focus {
 }
 
 .cta-section-1 {
-  /* background:
+  background:
     linear-gradient(270deg, rgba(32, 41, 110, 0) 0%, var(--black-color) 90%),
-    url("../../assets/images/cta/cta-bg-1-1.jpg") no-repeat; */
+    url('assets/home/cta-bg-1-1.jpg') no-repeat;
   background-position: center center;
   background-size: cover;
   z-index: 1;
@@ -19225,32 +19267,43 @@ button:focus {
   position: absolute;
   inset: 0;
   z-index: 0;
-}
-
+} /* REMOVE OLD WRAPPER STYLES */
 .hero-slider-container {
   width: 100%;
   height: 100%;
-}
-
-.hero-slider-wrapper {
-  display: flex;
+  position: relative;
+} /* NEW FADE SLIDES */
+.hero-slide {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
-  transition: transform 1s ease-in-out;
-}
-
-.hero-slide {
-  min-width: 100%;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  flex-shrink: 0;
+  opacity: 0;
+  transform: scale(1.08);
+  transition:
+    opacity 1.5s ease-in-out,
+    transform 6s ease-in-out;
+} /* ACTIVE IMAGE */
+.hero-slide.active {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 1;
 }
 
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.45);
+  /* background: rgba(0, 0, 0, 0.45); */
+  background: linear-gradient(
+    90deg,
+    rgba(221, 112, 15, 0.75) 0%,
+    rgba(221, 112, 15, 0.45) 30%,
+    rgba(221, 112, 15, 0.18) 55%,
+    transparent 78%
+  );
   z-index: 1;
 }
 
@@ -19261,12 +19314,12 @@ button:focus {
   position: relative;
   z-index: 5;
 }
-.hero-overlay {
+/* .hero-overlay {
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.45);
   z-index: 1;
-}
+} */
 
 .hero-slide.active {
   opacity: 1;
@@ -19309,7 +19362,9 @@ button:focus {
 .hero-content p {
   font-size: 19px;
   line-height: 1.9;
-  color: rgba(255, 255, 255, 0.88);
+  /* color: rgba(255, 255, 255, 0.88); */
+  color: #fff !important;
+  font-weight: 500;
   margin-bottom: 20px;
 }
 
@@ -19478,4 +19533,33 @@ button:focus {
   .event-content h3 {
     font-size: 24px;
   }
+}
+.fade-left,
+.fade-right,
+.fade-up {
+  opacity: 0;
+  transition: all 1s ease;
+}
+
+/* LEFT */
+.fade-left {
+  transform: translateX(-80px);
+}
+
+/* RIGHT */
+.fade-right {
+  transform: translateX(80px);
+}
+
+/* UP */
+.fade-up {
+  transform: translateY(80px);
+}
+
+/* ACTIVE */
+.fade-left.active,
+.fade-right.active,
+.fade-up.active {
+  opacity: 1;
+  transform: translate(0);
 }

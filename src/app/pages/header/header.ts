@@ -1,25 +1,29 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component } from '@angular/core';
 import { Navbar } from '../../reuseable/navbar/navbar';
 import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-header',
-  imports: [Navbar, CommonModule],
+  imports: [CommonModule, Navbar],
   templateUrl: './header.html',
   styleUrl: './header.css',
 })
 export class Header {
-  // currentIndex = 0;
+  // isLoading = true;
 
-  // slides = ['assets/background/bg1.png', 'assets/background/bg6.jpg', 'assets/background/bg7.jpg'];
+  currentIndex = 0;
+  sliderInterval: any;
+
+  slides = ['assets/background/bg2.png', 'assets/background/bg1.png', 'assets/background/bg6.jpg'];
+
   // ngOnInit(): void {
   //   this.autoSlide();
   // }
 
   // autoSlide(): void {
-  //   setInterval(() => {
+  //   this.sliderInterval = setInterval(() => {
   //     this.nextSlide();
-  //   }, 2000);
+  //   }, 1000);
   // }
 
   // nextSlide(): void {
@@ -37,40 +41,33 @@ export class Header {
   //     this.currentIndex = this.slides.length - 1;
   //   }
   // }
-  isLoading = true;
-
-  currentIndex = 0;
-  sliderInterval: any;
-
-  slides = ['assets/background/bg1.png', 'assets/background/bg6.jpg', 'assets/background/bg7.jpg'];
 
   ngOnInit(): void {
     this.autoSlide();
   }
-
   autoSlide(): void {
     this.sliderInterval = setInterval(() => {
-      this.nextSlide();
+      this.currentIndex = (this.currentIndex + 1) % this.slides.length;
     }, 4000);
   }
-
-  nextSlide(): void {
-    this.currentIndex++;
-
-    if (this.currentIndex >= this.slides.length) {
-      this.currentIndex = 0;
-    }
-  }
-
-  prevSlide(): void {
-    this.currentIndex--;
-
-    if (this.currentIndex < 0) {
-      this.currentIndex = this.slides.length - 1;
-    }
-  }
-
   ngOnDestroy(): void {
     clearInterval(this.sliderInterval);
   }
+
+  // currentIndex = 0;
+  // slides = ['assets/background/bg2.png', 'assets/background/bg1.png', 'assets/background/bg6.jpg'];
+  // sliderInterval: any;
+  // ngOnInit(): void {
+  //   this.startSlider();
+  // }
+  // startSlider(): void {
+  //   this.sliderInterval = setInterval(() => {
+  //     this.currentIndex = (this.currentIndex + 1) % this.slides.length;
+  //   }, 5000);
+  // }
+  // ngOnDestroy(): void {
+  //   if (this.sliderInterval) {
+  //     clearInterval(this.sliderInterval);
+  //   }
+  // }
 }
