@@ -1,22 +1,10 @@
-import {
-  AfterViewInit,
-  ChangeDetectorRef,
-  Component,
-  ElementRef,
-  HostListener,
-  OnInit,
-  Renderer2,
-  signal,
-  ViewChild,
-} from '@angular/core';
-
-import { Navbar } from './reuseable/navbar/navbar';
-import { NavigationEnd, NavigationStart, Router, RouterOutlet } from '@angular/router';
+import { AfterViewInit, ChangeDetectorRef, Component, ElementRef, HostListener, OnInit, Renderer2, signal, ViewChild } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, CommonModule],
+  imports: [CommonModule,RouterOutlet],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
@@ -38,6 +26,10 @@ export class App implements OnInit {
     private cdr: ChangeDetectorRef,
     private router: Router,
   ) {}
+
+  ngAfterViewInit(): void {
+    throw new Error('Method not implemented.');
+  }
 
   // =========================
   // Page Loader

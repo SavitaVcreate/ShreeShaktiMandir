@@ -22,6 +22,12 @@ export const routes: Routes = [
     loadComponent: () => import('./pages/donation/donation').then((m) => m.Donation),
   },
 
+  {
+    path: 'about-us',
+    loadComponent: () =>
+      import('./pages/aboutus/aboutus')
+        .then(m => m.Aboutus)
+  },
   //   {
   //     path: 'contact-us',
   //     loadComponent: () =>
