@@ -37,7 +37,18 @@
                                 <i class="fa-solid fa-location-dot"></i>
                             </div>
                             <div class="offcanvas-cta-content">
-                                <p>123 Serenity Lane, Suite 101, Hometown, CA 12345</p>
+                                <span class="fw-bold">Registered Address</span>
+                                <p>
+                                    73 Canon Street <br>
+                                    Leicester UK <br>
+                                    LE4 6NH
+                                </p>
+                                <span class="fw-bold">Entrance Address</span>
+                                <p>
+                                    70 Moira Street <br>
+                                    Leicester, UK <br>
+                                    LE4 6LA
+                                </p>
                             </div>
                         </div>
                         <div class="offcanvas-cta-list">
@@ -45,7 +56,7 @@
                                 <i class="fa-solid fa-envelope"></i>
                             </div>
                             <div class="offcanvas-cta-content">
-                                <a href="mailto:info@example.com">info@example.com</a>
+                                <a href="mailto:shaktimandirshree@gmail.com">shaktimandirshree@gmail.com</a>
                             </div>
                         </div>
                         <div class="offcanvas-cta-list">
@@ -53,7 +64,7 @@
                                 <i class="fa-solid fa-phone-volume"></i>
                             </div>
                             <div class="offcanvas-cta-content">
-                                <a href="tel:123446788">+1 234 467 88</a>
+                                <a href="tel:+44 7438357048">+44 7438357048</a>
                             </div>
                         </div>
                     </div>
@@ -62,7 +73,7 @@
         </div>
 
         <div class="offcanvas-button-wapper">
-            <a href="#" class="theme-button style-1" aria-label="Donate Now">
+            <a routerLink="/donate" class="theme-button style-1" aria-label="Donate Now">
                 <span data-text="Donate Now">Donate Now</span>
                 <i class="fa-solid fa-arrow-right"></i>
             </a>
@@ -76,13 +87,17 @@
                             <a href="#" aria-label="instagram"><i class="fa-brands fa-instagram"></i></a>
                         </li>
                         <li>
-                            <a href="#" aria-label="facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="https://www.facebook.com/shaktimandirleicester/?locale=en_GB"
+                                aria-label="facebook"><i class="fa-brands fa-facebook-f"></i></a>
                         </li>
                         <li>
                             <a href="#" aria-label="twitter"><i class="fa-brands fa-x-twitter"></i></a>
                         </li>
                         <li>
-                            <a href="#" aria-label="pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+                            <a href="https://www.tiktok.com/@shree.shakti.mand?_r=1&_t=ZN-96UZy11bAqE"
+                                aria-label="tiktok">
+                                <i class="fa-brands fa-tiktok"></i>
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -92,9 +107,9 @@
 </div>
 
 <!-- header start -->
-<header class="header header-1 mt-4">
+<header class="header header-1">
     <div class="header-lower">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row align-items-center justify-content-between g-0">
                 <div class="col-12">
                     <!-- header content start -->
@@ -125,83 +140,29 @@
                             <div class="main-menu">
                                 <nav id="mobile-menu">
                                     <ul>
-                                        <li class="menu-thumb">
-                                            <a class="nav-link" href="#">Home</a>
-
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" routerLink="/about-us">About Us</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="#">Volunteering</a>
-                                            <!-- <ul class="submenu">
-                                                <li><a href="#">Donation</a></li>
-                                                <li class="has-dropdown">
-                                                    <a href="#">Scholars <i class="fa-solid fa-chevron-right"></i></a>
-                                                    <ul class="submenu">
-                                                        <li><a href="#">Scholars</a></li>
-                                                        <li><a href="#">Scholars Details</a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li class="has-dropdown">
-                                                    <a href="#">Services <i class="fa-solid fa-chevron-right"></i></a>
-                                                    <ul class="submenu">
-                                                        <li><a href="#">Services</a></li>
-                                                        <li><a href="#">Services Details</a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li class="has-dropdown">
-                                                    <a href="#">Gallery <i class="fa-solid fa-chevron-right"></i></a>
-                                                    <ul class="submenu">
-                                                        <li><a href="#">Image Gallery</a></li>
-                                                        <li><a href="#">Video Gallery</a></li>
-                                                    </ul>
-                                                </li>
-
-                                            </ul> -->
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="#">Media<i class="fa-solid fa-angle-down"></i></a>
+                                        <li class="menu-thumb" routerLinkActive="active-link"
+                                            [routerLinkActiveOptions]="{ exact: true }"> <a class="nav-link"
+                                                routerLink="/">Home</a> </li>
+                                        <li class="nav-item" routerLinkActive="active-link"> <a class="nav-link"
+                                                routerLink="/about-us">About Us</a> </li>
+                                        <li class="nav-item" routerLinkActive="active-link"> <a class="nav-link"
+                                                routerLink="/voluntring">Volunteering</a> </li>
+                                        <li class="nav-item" routerLinkActive="active-link"> <a class="nav-link"
+                                                routerLink="/services">Services</a> </li>
+                                        <li class="nav-item"> <a class="nav-link" href="#"> Media <i
+                                                    class="fa-solid fa-angle-down"></i> </a>
                                             <ul class="submenu">
-                                                <li class="has-dropdown">
-                                                    <a href="#">Event <i class="fa-solid fa-chevron-right"></i></a>
+                                                <li class="has-dropdown"> <a href="#"> Event <i
+                                                            class="fa-solid fa-chevron-right"></i> </a>
                                                     <ul class="submenu">
                                                         <li><a href="#">Event List</a></li>
                                                         <li><a href="#">Event Details</a></li>
                                                     </ul>
                                                 </li>
-                                                <li class="has-dropdown">
-                                                    <a href="#">Blog <i class="fa-solid fa-chevron-right"></i></a>
-                                                    <ul class="submenu">
-                                                        <li><a href="#">Blog List</a></li>
-                                                        <li><a href="#">Blog Details</a></li>
-                                                    </ul>
-                                                </li>
                                             </ul>
                                         </li>
-
-                                        <!-- <li class="nav-item">
-                                            <a class="nav-link" href="#">Event<i class="fa-solid fa-angle-down"></i></a>
-                                            <ul class="submenu">
-
-                                                <li><a href="#">Event List</a></li>
-                                                <li><a href="#">Event Details</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="#">Blog <i
-                                                    class="fa-solid fa-chevron-down"></i></a>
-                                            <ul class="submenu">
-
-                                                <li><a href="#">Blog Standard</a></li>
-                                                <li><a href="#">Blog Details</a></li>
-                                            </ul>
-                                        </li> -->
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="contact.php">Contact Us</a>
-                                        </li>
+                                        <li class="nav-item" routerLinkActive="active-link"> <a class="nav-link"
+                                                routerLink="/contact">Contact Us</a> </li>
                                     </ul>
                                 </nav>
                             </div>
@@ -241,7 +202,7 @@
 
                             <!-- header button -->
                             <div class="header-button">
-                                <a href="#" class="theme-button style-1" aria-label="Donate Now">
+                                <a routerLink="/donate" class="theme-button style-1" aria-label="Donate Now">
                                     <span data-text="Donate Now">Donate Now</span>
                                     <i class="fa-solid fa-arrow-right"></i>
                                 </a>
@@ -277,7 +238,7 @@
 
 <!-- FLOATING SOCIAL SIDEBAR -->
 
-<div class="social-sidebar">
+<!-- <div class="social-sidebar">
 
     <a href="#" class="social-icon instagram" target="_blank">
 
@@ -309,7 +270,7 @@
 
     </a>
 
-</div>
+</div> -->
 
 
 <router-outlet></router-outlet>
