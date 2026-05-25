@@ -1,11 +1,10 @@
 import { AfterViewInit, ChangeDetectorRef, Component, ElementRef, HostListener, OnInit, Renderer2, signal, ViewChild } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { Footer } from './footer/footer/footer';
-import { Navbar } from './reuseable/navbar/navbar';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
-  imports: [Navbar,],
+  imports: [CommonModule,RouterOutlet],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
@@ -26,6 +25,7 @@ export class App implements OnInit, AfterViewInit {
     private el: ElementRef,
     private cdr: ChangeDetectorRef,
   ) {}
+
   ngAfterViewInit(): void {
     throw new Error('Method not implemented.');
   }
