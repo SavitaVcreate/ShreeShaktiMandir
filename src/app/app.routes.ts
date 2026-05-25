@@ -1,30 +1,31 @@
 import { Routes } from '@angular/router';
-
 export const routes: Routes = [
   {
     path: '',
-    loadComponent: () => import('./pages/header/header').then((m) => m.Header),
+    loadComponent: () => import('./pages/home/home').then((m) => m.Home),
   },
 
-  //   {
-  //     path: 'about-us',
-  //     loadComponent: () =>
-  //       import('./pages/about-us/about-us.component')
-  //         .then(m => m.AboutUsComponent)
-  //   },
+  {
+    path: 'voluntring',
+    loadComponent: () => import('./pages/volunteering/volunteering').then((m) => m.Volunteering),
+  },
+  {
+    path: 'services',
+    loadComponent: () => import('./pages/services/services').then((m) => m.Services),
+  },
+  {
+    path: 'contact',
+    loadComponent: () => import('./pages/contact/contact').then((m) => m.Contact),
+  },
+  {
+    path: 'donate',
+    loadComponent: () => import('./pages/donation/donation').then((m) => m.Donation),
+  },
 
   {
     path: 'about-us',
-    loadComponent: () =>
-      import('./pages/aboutus/aboutus')
-        .then(m => m.Aboutus)
+    loadComponent: () => import('./pages/aboutus/aboutus').then((m) => m.Aboutus),
   },
-  //   {
-  //     path: 'contact-us',
-  //     loadComponent: () =>
-  //       import('./pages/contact-us/contact-us.component')
-  //         .then(m => m.ContactUsComponent)
-  //   },
 
   //   {
   //     path: 'events',
