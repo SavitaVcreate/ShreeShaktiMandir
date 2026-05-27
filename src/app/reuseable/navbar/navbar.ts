@@ -10,12 +10,12 @@ import {
 } from '@angular/core';
 
 import { CommonModule } from '@angular/common';
-import { RouterLink, RouterOutlet } from '@angular/router';
+import { RouterOutlet, RouterLinkWithHref, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [CommonModule, RouterOutlet,RouterLink],
+  imports: [CommonModule, RouterOutlet, RouterLinkWithHref, RouterModule],
   templateUrl: './navbar.html',
   styleUrls: ['./navbar.css'],
 })
@@ -88,14 +88,15 @@ export class Navbar {
   // Sticky Header
   // =========================
 
-  @HostListener('window:scroll', [])
-  onWindowScroll1(): void {
+  @HostListener('window:scroll', []) onWindowScroll1(): void {
     const header = this.el.nativeElement.querySelector('.header .header-lower');
-
     if (window.scrollY > 250) {
-      header?.classList.add('sticky');
+      header?.classList.add('sticky'); // add body padding
+      document.body.classList.add('sticky-padding');
     } else {
       header?.classList.remove('sticky');
+      // // remove body padding
+      document.body.classList.remove('sticky-padding');
     }
   }
 }
