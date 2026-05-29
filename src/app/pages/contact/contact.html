@@ -10,12 +10,12 @@
                     <!-- breadcrumb content start -->
                     <div class="breadcrumb-content">
                         <!-- breadcrumb title start -->
-                        <div class="breadcrumb-title wow fadeInUp" data-wow-delay=".2s">
+                        <div class="breadcrumb-title">
                             <h1>Contact</h1>
                         </div>
                         <!-- breadcrumb title end -->
                         <!-- nav start -->
-                        <nav aria-label="breadcrumb" class="wow fadeInUp" data-wow-delay=".3s">
+                        <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="#">Home</a></li>
                                 <li class="breadcrumb-item active" aria-current="page">Contact</li>
@@ -40,24 +40,34 @@
 <!-- breadcrumb section end -->
 
 <!-- contact section start -->
-<section class="contact-section pt-100 md-pt-80 md-pb-50">
+<section class="contact-section pt-100 md-pt-80 md-pb-50 pb-50">
     <div class="container">
         <div class="row justify-content-between">
             <div class="col-lg-5">
                 <!-- section title start -->
-                <div class="section-title wow fadeInUp" data-wow-delay=".2s">
+                <div class="section-title wow fade-up">
                     <span class="sub-title">Contact Me</span>
                     <h2>Stay connect with us today</h2>
                 </div>
                 <!-- section title end -->
                 <!-- contact item wrapper start -->
-                <div class="contact-item-wrapper wow fadeInUp" data-wow-delay=".3s">
+                <div class="contact-item-wrapper wow fade-up" data-wow-delay=".3s">
                     <!-- contact items start -->
-                    <div class="contact-item">
+
+                    <!-- <div class="contact-item">
                         <div class="contact-icon"><i class="fa-solid fa-phone-volume"></i></div>
                         <div class="contact-content">
                             <p>Call Now</p>
                             <h3> +44 7438357048</h3>
+                        </div>
+                    </div> -->
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+                        <div class="contact-content">
+                            <p>Main Entrance Address</p>
+                            <h3>70 Moira Street
+                                Leicester, UK
+                                LE4 6LA</h3>
                         </div>
                     </div>
                     <!-- contact items end -->
@@ -71,10 +81,26 @@
                     </div>
                     <!-- contact items end -->
                     <!-- contact items start -->
+                    <!-- <div class="contact-item">
+                        <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+                        <div class="contact-content">
+                            <p>Main Entrance Address</p>
+                            <h3>70 Moira Street
+                                Leicester, UK
+                                LE4 6LA</h3>
+                        </div>
+                    </div> -->
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fa-solid fa-phone-volume"></i></div>
+                        <div class="contact-content">
+                            <p>Call Now</p>
+                            <h3> +44 (0) 7438357048</h3>
+                        </div>
+                    </div>
                     <div class="contact-item">
                         <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
                         <div class="contact-content">
-                            <p>Address</p>
+                            <p>Registered Address</p>
                             <h3>73 Canon Street
                                 Leicester
                                 LE4 6NH United Kingdom</h3>
@@ -147,12 +173,13 @@
                                         <div class="field-inner">
                                             <label for="phone">Phone Number*</label>
                                             <input id="phone" class="form-control" name="phone" type="text"
-                                                autocomplete="off" placeholder="Ex. 9876543210" required="required">
+                                                autocomplete="off" placeholder="Ex.+44 (0) 9876543210"
+                                                required="required">
                                             <span class="error" id="phone-error"></span>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-6 col-md-6">
+                                <!-- <div class="col-lg-6 col-md-6">
                                     <div class="form-group">
                                         <div class="field-inner">
                                             <label for="subject">Subject*</label>
@@ -161,6 +188,58 @@
                                             <span class="error" id="subject-error"></span>
                                         </div>
                                     </div>
+                                </div> -->
+                                <div class="col-lg-6 col-md-6">
+
+                                    <div class="form-group">
+
+                                        <div class="field-inner">
+
+                                            <label for="subject">
+                                                Enquiry Type*
+                                            </label>
+
+                                            <select id="subject" class="form-control" name="subject"
+                                                [(ngModel)]="selectedService">
+
+                                                <option value="">
+                                                    Select Enquiry Type
+                                                </option>
+
+                                                <option value="General Enquiry">
+                                                    General Enquiry
+                                                </option>
+
+                                                <option value="Daily Aarti & Pooja">
+                                                    Daily Aarti & Pooja
+                                                </option>
+
+                                                <option value="Dining Hall">
+                                                    Dining Hall
+                                                </option>
+
+                                                <option value="Marriage Ceremony">
+                                                    Marriage Ceremony
+                                                </option>
+
+                                                <option value="Yagna & Havan">
+                                                    Yagna & Havan
+                                                </option>
+
+                                                <option value="Festival Celebrations">
+                                                    Festival Celebrations
+                                                </option>
+
+                                                <option value="Prasad Seva">
+                                                    Prasad Seva
+                                                </option>
+
+                                            </select>
+
+                                        </div>
+
+                                    </div>
+
                                 </div>
                                 <div class="col-lg-12">
                                     <div class="form-group">
@@ -202,7 +281,7 @@
                 <!-- google map iframe start -->
                 <div class="google-map-iframe">
                     <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2396791.478889806!2d-5.623982693932331!3d54.08054089214548!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x25a3b1142c791a9%3A0xc4f8a0433288257a!2sUnited%20Kingdom!5e0!3m2!1sen!2sin!4v1746685564327!5m2!1sen!2sin"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2420.4376794566792!2d-1.1197208240640353!3d52.652071626443906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48776109811a5641%3A0x7d33c7c5031f028a!2s70%20Moira%20St%2C%20Leicester%2C%20UK!5e0!3m2!1sen!2sin!4v1779873523786!5m2!1sen!2sin"
                         allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
                         title="google map"></iframe>
                 </div>

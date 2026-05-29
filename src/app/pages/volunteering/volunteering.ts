@@ -29,7 +29,7 @@ export class Volunteering {
       city: ['', Validators.required],
       state: ['', Validators.required],
       country: ['', Validators.required],
-      zipcode: ['', Validators.required],
+      postcode: ['', Validators.required],
       thoughts: [''],
       consent: [false, Validators.requiredTrue],
     });

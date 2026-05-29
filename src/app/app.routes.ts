@@ -14,17 +14,33 @@ export const routes: Routes = [
     loadComponent: () => import('./pages/services/services').then((m) => m.Services),
   },
   {
+    path: 'services-details/:id',
+    loadComponent: () =>
+      import('./pages/services-details/services-details').then((m) => m.ServicesDetails),
+  },
+  {
+    path: 'about-us',
+    loadComponent: () => import('./pages/aboutus/aboutus').then((m) => m.Aboutus),
+  },
+  {
+    path: 'event',
+    loadComponent: () => import('./pages/event/event').then((m) => m.Event),
+  },
+  {
+    path: 'event-details/:slug',
+    loadComponent: () => import('./pages/event-details/event-details').then((m) => m.EventDetails),
+  },
+  {
+    path: 'gallery',
+    loadComponent: () => import('./pages/gallery/gallery').then((m) => m.Gallery),
+  },
+  {
     path: 'contact',
     loadComponent: () => import('./pages/contact/contact').then((m) => m.Contact),
   },
   {
     path: 'donate',
     loadComponent: () => import('./pages/donation/donation').then((m) => m.Donation),
-  },
-
-  {
-    path: 'about-us',
-    loadComponent: () => import('./pages/aboutus/aboutus').then((m) => m.Aboutus),
   },
 
   //   {

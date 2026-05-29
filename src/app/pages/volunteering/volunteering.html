@@ -8,12 +8,12 @@
                     <!-- breadcrumb content start -->
                     <div class="breadcrumb-content">
                         <!-- breadcrumb title start -->
-                        <div class="breadcrumb-title wow fadeInUp" data-wow-delay=".2s">
+                        <div class="breadcrumb-title">
                             <h1>Volunteering</h1>
                         </div>
                         <!-- breadcrumb title end -->
                         <!-- nav start -->
-                        <nav aria-label="breadcrumb" class="wow fadeInUp" data-wow-delay=".3s">
+                        <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="#">Home</a></li>
                                 <li class="breadcrumb-item active" aria-current="page">Volunteering</li>
@@ -106,20 +106,54 @@
                                 <label>City *</label>
                                 <input type="text" class="form-control" formControlName="city" placeholder="Enter city">
                             </div>
-                            <div class="col-md-6 mb-3">
+                            <!-- <div class="col-md-6 mb-3">
                                 <label>State *</label>
                                 <input type="text" class="form-control" formControlName="state"
                                     placeholder="Enter state">
-                            </div>
+                            </div> -->
                             <div class="col-md-6 mb-3">
                                 <label>Country *</label>
                                 <input type="text" class="form-control" formControlName="country"
                                     placeholder="Enter Country">
                             </div>
                             <div class="col-md-6 mb-3">
-                                <label>Zip Code *</label>
-                                <input type="text" class="form-control" formControlName="zipCode"
-                                    placeholder="Enter Zip Code">
+                                <label>Post Code *</label>
+                                <input type="text" class="form-control" formControlName="postCode"
+                                    placeholder="Enter Post Code">
+                            </div>
+                            <div class="col-md-6 mb-3">
+
+                                <label>
+                                    Subject *
+                                </label>
+
+                                <div class="custom-select-wrapper">
+
+
+                                    <select class="form-control custom-select">
+
+                                        <option value="">
+                                            Select Subject
+                                        </option>
+
+                                        <option value="Temple Seva Activities">
+                                            Temple Seva Activities
+                                        </option>
+
+                                        <option value="Community Support">
+                                            Community Support
+                                        </option>
+
+                                        <option value="Serve with Devotion">
+                                            Serve with Devotion
+                                        </option>
+
+
+
+                                    </select>
+
+                                </div>
+
                             </div>
                             <div class="col-12 mb-4">
                                 <label> Thoughts / Why do you want to volunteer? </label>

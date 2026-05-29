@@ -17,39 +17,13 @@ export class Header {
 
   slides = ['assets/background/bg2.png', 'assets/background/bg1.png', 'assets/background/bg6.jpg'];
 
-  // ngOnInit(): void {
-  //   this.autoSlide();
-  // }
-
-  // autoSlide(): void {
-  //   this.sliderInterval = setInterval(() => {
-  //     this.nextSlide();
-  //   }, 1000);
-  // }
-
-  // nextSlide(): void {
-  //   this.currentIndex++;
-
-  //   if (this.currentIndex >= this.slides.length) {
-  //     this.currentIndex = 0;
-  //   }
-  // }
-
-  // prevSlide(): void {
-  //   this.currentIndex--;
-
-  //   if (this.currentIndex < 0) {
-  //     this.currentIndex = this.slides.length - 1;
-  //   }
-  // }
-
   ngOnInit(): void {
     this.autoSlide();
   }
   autoSlide(): void {
     this.sliderInterval = setInterval(() => {
       this.currentIndex = (this.currentIndex + 1) % this.slides.length;
-    }, 4000);
+    }, 1000);
   }
   ngOnDestroy(): void {
     clearInterval(this.sliderInterval);
