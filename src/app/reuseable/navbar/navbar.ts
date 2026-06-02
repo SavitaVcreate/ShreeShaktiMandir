@@ -278,4 +278,9 @@ export class Navbar {
 
     this.closeSearchModal();
   }
+  isMediaMenuOpen = false;
+
+  toggleMediaMenu() {
+    this.isMediaMenuOpen = !this.isMediaMenuOpen;
+  }
 }

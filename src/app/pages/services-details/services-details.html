@@ -191,11 +191,7 @@
                                     <strong>Seating Capacity :</strong>
                                     {{ serviceData.capacity }}
                                 </li>
-                                <!-- <li>
-                                    <strong>Exclusions :</strong>
-                                    Traditional Attire, Pandit Ji Booking,
-                                    Music & Bhajans, and Dining Arrangements.
-                                </li> -->
+
                             </ul>
                         </div>
 
@@ -277,9 +273,6 @@
 
                         </div>
 
-                        <!-- <a routerlink="/contact" aria-label="Enquiry Now" href="/contact"
-                            class="theme-button style-1 mt-4"><span data-text="Enquire Now">Enquire Now</span><i
-                                class="fa-solid fa-arrow-right"></i></a> -->
                         <a [routerLink]="['/contact']" [queryParams]="{
       service: serviceData.title
     }" class="theme-button style-1 mt-4">
@@ -294,70 +287,6 @@
                     </div>
                 </div>
             </div>
-            <!-- <div class="row">
-                <div class="col-lg-12">
-                    <div class="timings-table-wrapper" *ngIf="serviceId == 'daily-aarti'">
-
-                        <table class="timings-table">
-
-                            <thead>
-                                <tr>
-                                    <th>Schedule</th>
-                                    <th>Summer</th>
-                                    <th>Winter</th>
-                                </tr>
-                            </thead>
-
-                            <tbody>
-                                <tr>
-                                    <td> Daily Temple Opening & Closing Time (Morning)</td>
-                                    <td [innerHTML]="serviceData.summerTempleOpen"></td>
-                                    <td [innerHTML]="serviceData.winterTempleOpen"></td>
-                                </tr>
-                                <tr>
-                                    <td>Daily Morning Aarti </td>
-                                    <td [innerHTML]="serviceData.summerMorningAarti"></td>
-                                    <td [innerHTML]="serviceData.winterMorningAarti"></td>
-                                </tr>
-                                <tr>
-                                    <td> Daily Evening Aarti </td>
-                                    <td [innerHTML]="serviceData.summerEveningAarti"></td>
-                                    <td [innerHTML]="serviceData.winterEveningAarti"></td>
-                                </tr>
-                                <tr>
-                                    <td>Daily Temple Opening & Closing Time (Evening) </td>
-                                    <td [innerHTML]="serviceData.summerTempleClose"></td>
-                                    <td [innerHTML]="serviceData.winterTempleClose"></td>
-                                </tr>
-                            </tbody>
-
-                        </table>
-
-                    </div>
-
-
-                    <div class="special-pooja" *ngIf="serviceId == 'daily-aarti'">
-
-                        <h4>
-
-                            Sunday Special Pooja :
-
-                            <span>
-                                {{ serviceData.sundaySpecialPooja }}
-                            </span>
-
-                        </h4>
-
-                        <p>
-
-                            {{ serviceData.festivalTiming }}
-
-                        </p>
-
-                    </div>
-                </div>
-            </div> -->
-
             <div class="row">
 
                 <div class="col-lg-12">
@@ -454,46 +383,6 @@
         </div>
     </div>
 </section>
-<!-- <section class="festival-section">
-
-    <div class="container">
-
-        <div class="heading">
-            <h2>Festival Calendar 2026</h2>
-            <p>Shree Shakti Mandir Temple</p>
-        </div>
-
-        <div class="calendar-grid">
-
-            <div class="calendar-card" *ngFor="let month of festivalCalendar">
-
-                <div class="month-title">
-                    {{ month.month }}
-                </div>
-
-                <div class="festival-row" *ngFor="let item of month.festivals">
-
-                    <div class="festival-info">
-
-                        <h4>{{ item.title }}</h4>
-
-                        <span>{{ item.hindi }}</span>
-
-                    </div>
-
-                    <div class="festival-date">
-                        {{ item.date }}
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section> -->
 
 <section class="campaigns-section-1 background-one" *ngIf="serviceId === 'festival-celebrations'">
     <!-- campaigns shape top -->
@@ -531,8 +420,9 @@
                             {{ month.month }}
                         </div>
 
-                        <div class="festival-row" *ngFor="let festival of month.festivals">
-
+                        <!-- <div class="festival-row" *ngFor="let festival of month.festivals"> -->
+                        <div class="festival-row" *ngFor="let festival of month.festivals"
+                            [class.today-festival]="isToday(festival.date)">
                             <div class="festival-name">
 
                                 <h4>{{ festival.title }}</h4>
@@ -561,48 +451,14 @@
 
 </section>
 
-<!-- <div class="custom-slider" *ngIf="serviceData?.gallery?.length">
+<!-- <button (click)="testNotification()">
+    Test Festival Notification
+</button> -->
 
-    <div class="slider-track" [style.transform]="'translateX(-' + currentImageIndex * 100 + '%)'">
-
-        <img *ngFor="let img of serviceData?.gallery" [src]="img" class="slider-image" alt="service image"
-            (click)="openImage(img)">
-
-    </div>
-
-    <button class="slider-btn prev" (click)="prevImage()">
-        ❮
-    </button>
-
-    <button class="slider-btn next" (click)="nextImage()">
-        ❯
-    </button>
-
-</div> -->
-
-<!-- IMAGE MODAL -->
-
-<!-- <div class="service-image-modal" *ngIf="showImageModal">
-
-    <div class="modal-content-wrapper">
-
-        <span class="close-modal" (click)="closeImage()">
-            ✕
-        </span>
-
-        <img [src]="selectedImage" class="modal-image">
-
-    </div>
-
-</div> -->
 <!-- IMAGE MODAL -->
 
 <div class="service-image-modal" *ngIf="showImageModal">
-
     <div class="modal-content-wrapper">
-
-
-
         <span class="close-modal" (click)="closeImage()">
             ✕
         </span>
@@ -610,16 +466,10 @@
         <button class="slider-btn prev" (click)="prevModalImage()">
             ❮
         </button>
-
-
         <img [src]="selectedImage" class="modal-image">
-
-
         <button class="slider-btn next" (click)="nextModalImage()">
             ❯
         </button>
-
     </div>
-
 </div>
 <app-footer></app-footer>

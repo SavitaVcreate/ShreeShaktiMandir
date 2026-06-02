@@ -28,7 +28,7 @@ export class Gallery {
   //   'assets/gallery/gallery-7.jpg',
   //   'assets/gallery/gallery-8.jpg',
   //   'assets/gallery/gallery-9.jpg',
-  //   'assets/gallery/gallery-10.jpg',
+  //   'assets/gallery/gallery-10.png',
   // ];
 
   // currentImageIndex = 0;
@@ -76,6 +76,30 @@ export class Gallery {
       alt: 'Temple Gallery 13',
     },
     {
+      image: 'assets/gallery/gallery-5.jpg',
+      alt: 'Temple Gallery 5',
+    },
+
+    {
+      image: 'assets/gallery/g10.png',
+      alt: 'Temple Gallery 6',
+    },
+
+    {
+      image: 'assets/gallery/gallery-6.png',
+      alt: 'Temple Gallery 7',
+    },
+
+    {
+      image: 'assets/gallery/gallery-11.png',
+      alt: 'Temple Gallery 8',
+    },
+
+    {
+      image: 'assets/gallery/gallery-2.png',
+      alt: 'Temple Gallery 10',
+    },
+    {
       image: 'assets/gallery/g4.png',
       alt: 'Temple Gallery 14',
     },
@@ -109,48 +133,18 @@ export class Gallery {
     },
 
     {
-      image: 'assets/gallery/gallery-2.jpg',
+      image: 'assets/gallery/gallery-2.png',
       alt: 'Temple Gallery 2',
     },
 
     {
-      image: 'assets/gallery/gallery-3.jpg',
+      image: 'assets/gallery/gallery-3.png',
       alt: 'Temple Gallery 3',
     },
 
     {
       image: 'assets/gallery/gallery-4.jpg',
       alt: 'Temple Gallery 4',
-    },
-
-    {
-      image: 'assets/gallery/gallery-5.jpg',
-      alt: 'Temple Gallery 5',
-    },
-
-    {
-      image: 'assets/gallery/gallery-6.png',
-      alt: 'Temple Gallery 6',
-    },
-
-    {
-      image: 'assets/gallery/gallery-7.jpg',
-      alt: 'Temple Gallery 7',
-    },
-
-    {
-      image: 'assets/gallery/gallery-8.jpg',
-      alt: 'Temple Gallery 8',
-    },
-
-    {
-      image: 'assets/gallery/gallery-9.jpg',
-      alt: 'Temple Gallery 9',
-    },
-
-    {
-      image: 'assets/gallery/gallery-10.jpg',
-      alt: 'Temple Gallery 10',
     },
   ];
 

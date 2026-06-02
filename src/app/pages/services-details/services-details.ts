@@ -11,6 +11,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './services-details.css',
 })
 export class ServicesDetails implements OnInit {
+  constructor(private route: ActivatedRoute) {}
   serviceId: string | null = '';
 
   serviceData: any;
@@ -280,6 +281,7 @@ export class ServicesDetails implements OnInit {
       ],
     },
   };
+
   festivalCalendar = [
     {
       month: 'January 2026',
@@ -663,16 +665,48 @@ export class ServicesDetails implements OnInit {
 
   currentIndex = 0;
   cardsPerView = 2;
+  setCurrentMonth() {
+    const monthNames = [
+      'January',
+      'February',
+      'March',
+      'April',
+      'May',
+      'June',
+      'July',
+      'August',
+      'September',
+      'October',
+      'November',
+      'December',
+    ];
 
-  constructor(private route: ActivatedRoute) {}
+    const currentMonthName = monthNames[new Date().getMonth()];
 
+    const index = this.festivalCalendar.findIndex((month) =>
+      month.month.startsWith(currentMonthName),
+    );
+
+    if (index !== -1) {
+      this.currentIndex = index;
+    }
+  }
   ngOnInit(): void {
     this.route.paramMap.subscribe((params) => {
       this.serviceId = params.get('id');
 
       this.serviceData = this.services[this.serviceId || ''];
 
-      /* RESET SLIDER */
+      /* CURRENT MONTH START */
+
+      this.updateCardsPerView();
+      this.setCurrentMonth();
+
+      /* FESTIVAL CHECK */
+
+      this.checkTodayFestival();
+
+      /* RESET GALLERY */
 
       this.currentImageIndex = 0;
 
@@ -680,9 +714,13 @@ export class ServicesDetails implements OnInit {
 
       this.startSlider();
 
-      /* SCROLL TOP */
-
       window.scrollTo(0, 0);
+
+      // setTimeout(() => {
+      //   new Notification('🙏 Shree Shakti Mandir', {
+      //     body: 'Today is Ekadashi',
+      //   });
+      // }, 3000);
     });
   }
   @HostListener('window:resize')
@@ -690,6 +728,69 @@ export class ServicesDetails implements OnInit {
     this.updateCardsPerView();
   }
 
+  /* =========================
+   TODAY HIGHLIGHT
+========================= */
+
+  isToday(dateString: string): boolean {
+    const today = new Date();
+
+    const parts = dateString.split('-');
+
+    const day = Number(parts[0]);
+    const month = Number(parts[1]) - 1;
+    const year = Number('20' + parts[2].split(' ')[0]);
+
+    return today.getDate() === day && today.getMonth() === month && today.getFullYear() === year;
+  }
+
+  /* =========================
+   TODAY FESTIVAL ALERT
+========================= */
+
+  checkTodayFestival() {
+    const today = new Date();
+
+    this.festivalCalendar.forEach((month) => {
+      month.festivals.forEach((festival) => {
+        const parts = festival.date.split('-');
+
+        const day = Number(parts[0]);
+        const monthIndex = Number(parts[1]) - 1;
+        const year = Number('20' + parts[2].split(' ')[0]);
+
+        if (
+          today.getDate() === day &&
+          today.getMonth() === monthIndex &&
+          today.getFullYear() === year
+        ) {
+          this.showFestivalNotification(festival.title);
+        }
+      });
+    });
+  }
+
+  /* =========================
+   BROWSER NOTIFICATION
+========================= */
+
+  showFestivalNotification(title: string) {
+    if ('Notification' in window) {
+      if (Notification.permission === 'default') {
+        Notification.requestPermission().then((permission) => {
+          if (permission === 'granted') {
+            new Notification('🙏 Shree Shakti Mandir', {
+              body: `Today is ${title}`,
+            });
+          }
+        });
+      } else if (Notification.permission === 'granted') {
+        new Notification('🙏 Shree Shakti Mandir', {
+          body: `Today is ${title}`,
+        });
+      }
+    }
+  }
   updateCardsPerView() {
     if (window.innerWidth < 1200) {
       this.cardsPerView = 1;
@@ -699,6 +800,7 @@ export class ServicesDetails implements OnInit {
   }
 
   get visibleMonths() {
+    // return this.festivalCalendar.slice(this.currentIndex, this.currentIndex + this.cardsPerView);
     return this.festivalCalendar.slice(this.currentIndex, this.currentIndex + this.cardsPerView);
   }
 
@@ -767,15 +869,6 @@ export class ServicesDetails implements OnInit {
   selectedImage = '';
 
   modalImageIndex = 0;
-  // openImage(img: string) {
-  //   this.selectedImage = img;
-
-  //   this.showImageModal = true;
-  // }
-
-  // closeImage() {
-  //   this.showImageModal = false;
-  // }
 
   openImage(img: string) {
     this.modalImageIndex = this.serviceData.gallery.indexOf(img);
@@ -808,4 +901,27 @@ export class ServicesDetails implements OnInit {
 
     this.selectedImage = this.serviceData.gallery[this.modalImageIndex];
   }
+
+  // testNotification() {
+  //   if (!('Notification' in window)) {
+  //     alert('Browser does not support notifications');
+  //     return;
+  //   }
+
+  //   if (Notification.permission === 'granted') {
+  //     new Notification('🙏 Shree Shakti Mandir', {
+  //       body: 'Today is Ekadashi',
+  //       icon: 'assets/logo.png', // optional
+  //     });
+  //   } else {
+  //     Notification.requestPermission().then((permission) => {
+  //       if (permission === 'granted') {
+  //         new Notification('🙏 Shree Shakti Mandir', {
+  //           body: 'Today is Ekadashi',
+  //           icon: 'assets/logo.png',
+  //         });
+  //       }
+  //     });
+  //   }
+  // }
 }

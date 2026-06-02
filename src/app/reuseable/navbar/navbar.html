@@ -2,9 +2,11 @@
 <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvas-sidebar">
     <div class="offcanvas-header">
         <div class="offcanvas-logo">
-            <figure>
-                <img src="assets/logo/logo-white.png" alt="offcanvas logo">
-            </figure>
+            <a href="/">
+                <figure>
+                    <img src="assets/logo/logo-white.png" alt="offcanvas logo">
+                </figure>
+            </a>
             <div class="logo-shape">
                 <svg width="139" height="47" viewBox="0 0 139 47" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -17,7 +19,65 @@
                 class="fa-solid fa-xmark"></i></button>
     </div>
     <div class="offcanvas-body">
+        <!-- <div class="mobile-menu">
+        </div> -->
         <div class="mobile-menu">
+            <ul class="mobile-nav">
+
+                <li>
+                    <a routerLink="/">Home</a>
+                </li>
+
+                <li>
+                    <a routerLink="/about-us">About Us</a>
+                </li>
+
+                <li>
+                    <a routerLink="/voluntring">Volunteering</a>
+                </li>
+
+                <li>
+                    <a routerLink="/services">Services</a>
+                </li>
+
+                <li>
+                    <a routerLink="/event">Events</a>
+                </li>
+
+                <!-- Media Dropdown -->
+                <!-- <li class="has-dropdown">
+                    <a href="javascript:void(0)" (click)="toggleMediaMenu()">
+                        Media
+                        <i class="fa-solid fa-angle-down"></i>
+                    </a>
+
+                    <ul class="submenu" *ngIf="isMediaMenuOpen">
+                        <li>
+                            <a routerLink="/gallery">Gallery</a>
+                        </li>
+                    </ul>
+                </li> -->
+
+                <li class="has-dropdown">
+                    <a href="javascript:void(0)" (click)="toggleMediaMenu()">
+                        <span>Media</span>
+
+                        <i class="fa-solid fa-angle-down" [class.rotate]="isMediaMenuOpen">
+                        </i>
+                    </a>
+
+                    <ul class="submenu" *ngIf="isMediaMenuOpen">
+                        <li>
+                            <a routerLink="/gallery">Gallery</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a routerLink="/contact">Contact Us</a>
+                </li>
+
+            </ul>
         </div>
         <div class="offcanvas-about d-none d-xl-block">
             <p>
@@ -117,7 +177,7 @@
                         <div class="header-left">
                             <div class="logo-box">
                                 <div class="logo">
-                                    <a href="#">
+                                    <a href="/">
                                         <figure>
                                             <img src="assets/logo/logo-white.png" alt="header logo">
                                         </figure>

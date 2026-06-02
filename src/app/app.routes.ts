@@ -42,6 +42,11 @@ export const routes: Routes = [
     path: 'donate',
     loadComponent: () => import('./pages/donation/donation').then((m) => m.Donation),
   },
+  {
+    path: 'online-donate',
+    loadComponent: () =>
+      import('./pages/online-donation/online-donation').then((m) => m.OnlineDonation),
+  },
 
   //   {
   //     path: 'events',

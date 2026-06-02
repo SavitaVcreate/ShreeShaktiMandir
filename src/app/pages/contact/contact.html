@@ -199,7 +199,7 @@
                                                 Enquiry Type*
                                             </label>
 
-                                            <select id="subject" class="form-control" name="subject"
+                                            <!-- <select id="subject" class="form-control" name="subject"
                                                 [(ngModel)]="selectedService">
 
                                                 <option value="">
@@ -234,8 +234,25 @@
                                                     Prasad Seva
                                                 </option>
 
-                                            </select>
+                                            </select> -->
 
+                                            <div class="custom-select-wrapper">
+                                                <select id="subject" class="form-control custom-select" name="subject"
+                                                    [(ngModel)]="selectedService">
+
+                                                    <option value="">Select Enquiry Type</option>
+                                                    <option value="General Enquiry">General Enquiry</option>
+                                                    <option value="Daily Aarti & Pooja">Daily Aarti & Pooja</option>
+                                                    <option value="Dining Hall">Dining Hall</option>
+                                                    <option value="Marriage Ceremony">Marriage Ceremony</option>
+                                                    <option value="Yagna & Havan">Yagna & Havan</option>
+                                                    <option value="Festival Celebrations">Festival Celebrations</option>
+                                                    <option value="Prasad Seva">Prasad Seva</option>
+                                                </select>
+
+                                                <i class="fa-solid fa-angle-down select-icon">
+                                                </i>
+                                            </div>
                                         </div>
 
                                     </div>
