@@ -199,42 +199,24 @@ export class Navbar {
       route: '/services-details/festival-celebrations',
     },
 
-    {
-      name: 'Bhajan Sandhya',
-      keywords: 'bhajan sandhya devotional songs',
-      route: '/services-details/bhajan-sandhya',
-    },
-
-    {
-      name: 'Shiv Mahapuran Katha',
-      keywords: 'shiv mahapuran katha story',
-      route: '/services-details/shiv-mahapuran-katha',
-    },
-
-    {
-      name: 'Mata Ki Chowki',
-      keywords: 'mata ki chowki jagran bhajan',
-      route: '/services-details/mata-ki-chowki',
-    },
-
     /* EVENTS */
 
     {
       name: 'The Secret to Attaining Peace',
-      keywords: 'peace spiritual event',
+      keywords: 'peace happiness satsang spiritual chanting bageeshwari devi',
       route: '/event-details/secret-to-attaining-peace',
     },
 
     {
-      name: 'Shanidev Janmotsav 2026',
-      keywords: 'shanidev festival celebration',
-      route: '/event-details/shanidev-janmotsav-2026',
+      name: 'Shree Hanuman Charitra Katha',
+      keywords: 'hanuman katha hanuman charitra ram bhakti mehul bhai jani',
+      route: '/event-details/shree-hanuman-charitra-katha',
     },
 
     {
-      name: 'Maa Chintpurni Celebration',
-      keywords: 'maa chintpurni mata festival',
-      route: '/event-details/maa-chintpurni-celebration',
+      name: 'Hari Naam Sankirtan',
+      keywords: 'krishna bhajan iskcon leicester hari naam sankirtan kirtan',
+      route: '/event-details/hari-naam-sankirtan',
     },
   ];
   filteredItems = [...this.searchItems];

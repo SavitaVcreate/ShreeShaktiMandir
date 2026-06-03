@@ -113,7 +113,7 @@
 
                                 <li>
                                     <i class="fa-solid fa-location-dot"></i>
-                                    {{ item.location }}
+                                    <p>Main Entrance : <br> {{ item.location }}</p>
                                 </li>
 
                             </ul>
@@ -122,7 +122,7 @@
                             <div class="campaigns-button-wapper">
                                 <a [routerLink]="['/event-details', item.slug]" class="theme-button style-1">
 
-                                    <span data-text="More Details">
+                                    <span data-text="View Details">
                                         {{ item.button }}
                                     </span>
 
@@ -161,91 +161,24 @@
                 </p>
 
             </div>
-
             <!-- <div class="row g-4 pt-5 fade-up">
-                <div class="col-lg-4 col-md-6">
-                    <div class="card-event">
-                        <div class="image-event"> <img src="assets/event/img1.png" alt="Navratri Festival"
-                                class="img-fluid">
-                            <div class="event-overlay"></div>
-                        </div>
-                        <div class="event-content">
-                            <h3>Shiv Mahapuran Katha</h3>
-                            <p> Experience the divine stories and spiritual wisdom of Lord Shiva through sacred Shiv
-                                Mahapuran Katha. </p>
-                            <div class="campaigns-button-wapper">
-                                <a routerlink="/donate" aria-label="Enquiry Now" class="theme-button style-1"
-                                    href="/contact">
-                                    <span data-text="Enquiry Now">Enquiry
-                                        Now</span>
-                                    <i class="fa-solid fa-arrow-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="card-event">
-                        <div class="image-event">
-                            <img src="assets/event/img2.png" alt="Durga Puja" class="img-fluid">
-                            <div class="event-overlay"></div>
-                        </div>
-                        <div class="event-content">
-                            <h3>Pooja & Bhandara</h3>
-                            <p> Join the holy Pooja and Bhandara ceremony filled with blessings, devotion, and
-                                positivity. </p>
-                            <div class="campaigns-button-wapper">
-                                <a routerlink="/donate" aria-label="Enquiry Now" class="theme-button style-1"
-                                    href="/contact">
-                                    <span data-text="Enquiry Now">Enquiry Now</span>
-                                    <i class="fa-solid fa-arrow-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="card-event">
-                        <div class="image-event">
-                            <img src="assets/event/img3.png" alt="Maha Aarti" class="img-fluid">
-                            <div class="event-overlay"></div>
-                        </div>
-                        <div class="event-content">
-                            <h3>Mataji Ki Chowki</h3>
-                            <p> Celebrate devotional bhajans and seek the divine blessings of Maa Durga with faith. </p>
-                            <div class="campaigns-button-wapper">
-                                <a routerlink="/donate" aria-label="Enquiry Now" class="theme-button style-1"
-                                    href="/contact">
-                                    <span data-text="Enquiry Now">Enquiry Now</span>
-                                    <i class="fa-solid fa-arrow-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
-
-            <div class="row g-4 pt-5 fade-up">
 
                 <div class="col-lg-4 col-md-6" *ngFor="let item of pastEvents">
 
                     <div class="card-event">
 
-                        <!-- Image -->
                         <div class="image-event">
 
                             <img [src]="item.image" [alt]="item.title" class="img-fluid">
 
                             <div class="event-overlay"></div>
 
-                            <!-- Badge -->
                             <div class="past-badge">
                                 Completed
                             </div>
 
                         </div>
 
-                        <!-- Content -->
                         <div class="event-content">
 
                             <span class="event-category mb-0">
@@ -260,7 +193,6 @@
                                 {{ item.description }}
                             </p>
 
-                            <!-- Event Info -->
                             <ul class="event-info">
 
                                 <li>
@@ -281,7 +213,69 @@
 
                 </div>
 
+            </div> -->
+
+            <div class="swiper pt-5 past-events-slider">
+
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide" *ngFor="let item of pastEvents">
+
+                        <div class="card-event">
+
+                            <div class="image-event">
+
+                                <img [src]="item.image" [alt]="item.title" class="img-fluid">
+
+                                <div class="event-overlay"></div>
+
+                                <div class="past-badge">
+                                    Completed
+                                </div>
+
+                            </div>
+
+                            <div class="event-content">
+
+                                <span class="event-category">
+                                    {{ item.category }}
+                                </span>
+
+                                <h3>
+                                    {{ item.title }}
+                                </h3>
+
+                                <p>
+                                    {{ item.description }}
+                                </p>
+
+                                <ul class="event-info">
+
+                                    <li>
+                                        <i class="fa-regular fa-calendar-days"></i>
+                                        {{ item.date }}
+                                    </li>
+
+                                    <li>
+                                        <i class="fa-regular fa-clock"></i>
+                                        {{ item.time }}
+                                    </li>
+
+                                </ul>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="swiper-pagination position-relative"></div>
+
             </div>
+
         </div>
     </div>
 </section>

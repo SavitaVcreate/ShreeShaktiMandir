@@ -70,6 +70,18 @@
 
                         <div class="price-wrapper">
 
+                            <div class="price-card" *ngIf="serviceId == 'daily-aarti'">
+
+                                <h3>
+                                    Seva Contribution Start From
+                                </h3>
+
+                                <h4>
+                                    {{ serviceData.charge }}
+                                </h4>
+
+                            </div>
+
                             <div class="price-card" *ngIf="serviceId == 'yagna-havan'">
 
                                 <h3>
@@ -342,7 +354,7 @@
                                 <tr>
 
                                     <td>
-                                        Daily Aarti
+                                        Daily Aarti (Morning)
                                     </td>
 
                                     <td>
@@ -351,6 +363,22 @@
 
                                     <td>
                                         {{ serviceData?.dailyMorningAarti }}
+                                    </td>
+
+                                </tr>
+
+                                <tr>
+
+                                    <td>
+                                        Daily Aarti (Evening)
+                                    </td>
+
+                                    <td>
+                                        {{ serviceData?.dailyEveningAartiSummer }}
+                                    </td>
+
+                                    <td>
+                                        {{ serviceData?.dailyEveningAartiWinter }}
                                     </td>
 
                                 </tr>

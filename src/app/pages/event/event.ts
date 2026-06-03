@@ -1,8 +1,10 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component } from '@angular/core';
 import { Navbar } from '../../reuseable/navbar/navbar';
 import { Footer } from '../../footer/footer/footer';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
+import { Autoplay, Pagination } from 'swiper/modules';
+import Swiper from 'swiper';
 
 @Component({
   selector: 'app-event',
@@ -10,30 +12,30 @@ import { RouterLink } from '@angular/router';
   templateUrl: './event.html',
   styleUrl: './event.css',
 })
-export class Event {
+export class Event implements AfterViewInit {
   events = [
-    {
-      id: 1,
+    // {
+    //   id: 1,
 
-      slug: 'secret-to-attaining-peace',
+    //   slug: 'secret-to-attaining-peace',
 
-      title: 'Bhagwat Katha By Holi Guru Bageshwari Devi',
+    //   title: 'Bhagwat Katha By Holi Guru Bageshwari Devi',
 
-      image: 'assets/event/event3.png',
+    //   image: 'assets/event/event3.png',
 
-      date: '30 & 31 May 2026',
+    //   date: '30 & 31 May 2026',
 
-      time: '04:30 PM to 06:30 PM',
+    //   time: '04:30 PM to 06:30 PM',
 
-      location: '70 Moira Street Leicester, UK LE4 6LA',
+    //   location: '70 Moira Street Leicester, UK LE4 6LA',
 
-      category: 'Spiritual Satsang',
+    //   category: 'Spiritual Satsang',
 
-      description:
-        'Join the divine spiritual satsang and discover peace, happiness, and devotion through chanting God’s holy name.',
+    //   description:
+    //     'Join the divine spiritual satsang and discover peace, happiness, and devotion through chanting God’s holy name.',
 
-      button: 'More Details',
-    },
+    //   button: 'View Details',
+    // },
 
     {
       id: 2,
@@ -55,11 +57,47 @@ export class Event {
       description:
         'Experience the divine life, bhakti, courage, and teachings of Prabhu Hanuman through sacred katha and bhajans.',
 
-      button: 'More Details',
+      button: 'View Details',
+    },
+    {
+      id: 3,
+
+      slug: 'hari-naam-sankirtan',
+
+      title: 'Hari Naam Sankirtan',
+
+      image: 'assets/event/event-3.jpeg',
+
+      date: '7 June 2026',
+
+      time: '04:30 PM to 06:30 PM',
+
+      location: '70 Moira Street Leicester, UK LE4 6LA',
+
+      category: 'Spiritual Kirtan',
+
+      description:
+        'Join the divine Hari Naam Sankirtan by ISKCON Leicester and immerse yourself in devotional chanting, bhajans, and spiritual bliss.',
+
+      button: 'View Details',
     },
   ];
 
   pastEvents = [
+    {
+      title: 'Bhagwat Katha By Holi Guru Bageshwari Devi',
+
+      image: 'assets/event/event3.png',
+
+      date: '30 & 31 May 2026',
+
+      time: '04:30 PM to 06:30 PM',
+
+      category: 'Spiritual Satsang',
+
+      description:
+        'Join the divine spiritual satsang and discover peace, happiness, and devotion through chanting God’s holy name.',
+    },
     {
       title: 'Shiv Mahapuran Katha',
 
@@ -105,4 +143,37 @@ export class Event {
         'Celebrate devotional bhajans and seek the divine blessings of Maa Durga with faith.',
     },
   ];
+  ngAfterViewInit(): void {
+    setTimeout(() => {
+      new Swiper('.past-events-slider', {
+        modules: [Autoplay, Pagination],
+
+        slidesPerView: 3,
+        spaceBetween: 30,
+        loop: true,
+
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+
+        breakpoints: {
+          320: {
+            slidesPerView: 1,
+          },
+          768: {
+            slidesPerView: 2,
+          },
+          1200: {
+            slidesPerView: 3,
+          },
+        },
+      });
+    }, 2000);
+  }
 }

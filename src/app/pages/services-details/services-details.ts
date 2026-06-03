@@ -75,7 +75,7 @@ export class ServicesDetails implements OnInit {
         'assets/about/about-one.png',
         'assets/about/about2.jpeg',
       ],
-
+      charge: '£21',
       tag: 'Temple Prayer Service',
 
       desc: 'Experience divine peace through daily Aarti, Bhajans, and traditional Hindu pooja ceremonies.',
@@ -97,6 +97,9 @@ export class ServicesDetails implements OnInit {
       dailyMorningAarti: '8:30 AM',
 
       bhogAarti: '10:30 AM',
+
+      dailyEveningAartiSummer: '6:30 PM',
+      dailyEveningAartiWinter: '6:00 PM',
 
       facilities: [
         'Morning & Evening Aarti',

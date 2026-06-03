@@ -28,10 +28,10 @@ export class Home implements AfterViewInit {
 
   galleryImages: string[] = [
     'assets/gallery/gallery-1.jpg',
-    'assets/gallery/gallery-2.jpg',
-    'assets/gallery/gallery-3.jpg',
-    'assets/gallery/gallery-4.jpg',
-    'assets/gallery/gallery-5.jpg',
+    'assets/gallery/gallery-6.png',
+    'assets/gallery/g5.png',
+    'assets/gallery/g10.png',
+    'assets/gallery/g2.png',
     'assets/gallery/gallery-6.png',
   ];
 
@@ -138,20 +138,20 @@ export class Home implements AfterViewInit {
     });
   }
   events = [
-    {
-      id: 1,
+    // {
+    //   id: 1,
 
-      slug: 'secret-to-attaining-peace',
+    //   slug: 'secret-to-attaining-peace',
 
-      title: 'Bhagwat Katha By Holi Guru Bageshwari Devi',
+    //   title: 'Bhagwat Katha By Holi Guru Bageshwari Devi',
 
-      image: 'assets/event/event3.png',
+    //   image: 'assets/event/event3.png',
 
-      description:
-        'Join the divine spiritual satsang and discover peace, happiness, and devotion through chanting God’s holy name.',
+    //   description:
+    //     'Join the divine spiritual satsang and discover peace, happiness, and devotion through chanting God’s holy name.',
 
-      button: 'More Details',
-    },
+    //   button: 'View Details',
+    // },
 
     {
       id: 2,
@@ -165,7 +165,21 @@ export class Home implements AfterViewInit {
       description:
         'Experience the divine life, bhakti, courage, and teachings of Prabhu Hanuman through sacred katha and bhajans.',
 
-      button: 'More Details',
+      button: 'View Details',
+    },
+    {
+      id: 3,
+
+      slug: 'hari-naam-sankirtan',
+
+      title: 'Hari Naam Sankirtan',
+
+      image: 'assets/event/event-3.jpeg',
+
+      description:
+        'Join the divine Hari Naam Sankirtan by ISKCON Leicester and immerse yourself in devotional chanting, bhajans, and spiritual bliss.',
+
+      button: 'View Details',
     },
   ];
 }

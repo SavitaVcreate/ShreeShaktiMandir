@@ -65,6 +65,52 @@ export class EventDetails {
         { activity: 'Maha Aarti & Prasadam', timing: '07:30 PM' },
       ],
     },
+    {
+      id: 3,
+
+      slug: 'hari-naam-sankirtan',
+
+      title: 'Hari Naam Sankirtan by ISKCON Leicester',
+
+      banner: 'assets/event/event-3.jpeg',
+
+      category: 'Spiritual Kirtan & Bhajan',
+
+      speaker: 'ISKCON Leicester',
+
+      date: 'Sunday, 7th June 2026',
+
+      time: '04:30 PM to 06:30 PM',
+
+      location: '70 Moira Street Leicester, UK LE4 6LA',
+
+      description:
+        'Shree Shakti Mandir warmly invites all devotees and families to participate in the divine Hari Naam Sankirtan led by ISKCON Leicester. Experience the joy of devotional chanting, bhajans, spiritual unity, and the blessings of Lord Krishna in a peaceful and uplifting atmosphere.',
+
+      highlights: [
+        'Hari Naam Sankirtan',
+        'Krishna Bhajans & Kirtans',
+        'Devotional Gathering',
+        'Daily Aarti at 06:30 PM',
+        'Prasadam Distribution',
+        'Family Spiritual Event',
+      ],
+
+      schedule: [
+        {
+          activity: 'Hari Naam Sankirtan',
+          timing: '04:30 PM',
+        },
+        {
+          activity: 'Daily Aarti',
+          timing: '06:30 PM',
+        },
+        {
+          activity: 'Prasadam Distribution',
+          timing: 'After Aarti',
+        },
+      ],
+    },
   ];
 
   constructor(private route: ActivatedRoute) {}

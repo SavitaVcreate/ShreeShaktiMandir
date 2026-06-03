@@ -11,9 +11,14 @@
             </div>
         </div> -->
         <div class="hero-slider-container">
-            <div class="hero-slide" *ngFor="let slide of slides; let i = index" [class.active]="i === currentIndex"
+            <!-- <div class="hero-slide" *ngFor="let slide of slides; let i = index" [class.active]="i === currentIndex"
                 [style.background-image]="'url(' + slide + ')'" [ngClass]="{ 'first-slide': i === 0 }"
-                [style.backgroundImage]="'url(' + slide + ')'"> </div>
+                [style.backgroundImage]="'url(' + slide + ')'"> </div> -->
+            <div class="hero-slider-container">
+                <div class="hero-slide" *ngFor="let slide of slides; let i = index" [class.active]="i === currentIndex"
+                    [style.background-image]="'url(' + slide + ')'">
+                </div>
+            </div>
         </div>
     </div>
     <!-- <div class="hero-slider">
@@ -54,6 +59,12 @@
                             Donate Now
                         </a>
 
+
+                    </div>
+                    <div class="mt-3">
+                        <a [routerLink]="['/services-details', 'daily-aarti']" class="theme-btn border-btn">
+                            Join Daily Morning & Evening Aarti
+                        </a>
                     </div>
 
                 </div>

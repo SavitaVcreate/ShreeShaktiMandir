@@ -20,10 +20,16 @@ export class Header {
   ngOnInit(): void {
     this.autoSlide();
   }
+  // autoSlide(): void {
+  //   this.sliderInterval = setInterval(() => {
+  //     this.currentIndex = (this.currentIndex + 1) % this.slides.length;
+  //   }, 1000);
+  // }
   autoSlide(): void {
     this.sliderInterval = setInterval(() => {
       this.currentIndex = (this.currentIndex + 1) % this.slides.length;
-    }, 1000);
+      console.log(this.currentIndex);
+    }, 3000);
   }
   ngOnDestroy(): void {
     clearInterval(this.sliderInterval);
