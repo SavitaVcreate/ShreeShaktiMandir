@@ -5,7 +5,7 @@ import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-donation',
-  imports: [Navbar, Footer, RouterLink],
+  imports: [Navbar, Footer],
   templateUrl: './donation.html',
   styleUrl: './donation.css',
 })

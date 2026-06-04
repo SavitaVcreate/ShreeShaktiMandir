@@ -20093,7 +20093,7 @@ button:focus {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 16px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 .facility-item {
   display: flex;
@@ -21058,4 +21058,43 @@ button:focus {
 
 .select-icon.rotate {
   transform: translateY(-50%) rotate(180deg);
+}
+/* contact */
+.conatct-form {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #b3001b, #d94b63) !important;
+  color: #fff !important;
+}
+
+.conatct-form::before {
+  content: '';
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 250px;
+  height: 250px;
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 50%;
+}
+.conatct-form .btn-close {
+  color: #fff !important;
+}
+
+.conatct-form .modal-header {
+  border-bottom: none !important;
+}
+
+.conatct-form .modal-footer {
+  border-top: none !important;
+}
+
+.conatct-form .modal-body p {
+  color: #fff;
+  font-size: 20px;
+  margin: 0;
+}
+.conatct-form .contact-ok {
+  background-image: linear-gradient(to right, #8f0017 0%, #c6011f 50%, #8f0017 100%);
+  color: #fff;
 }

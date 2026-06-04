@@ -1,7 +1,7 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import { Navbar } from '../../reuseable/navbar/navbar';
 import { Footer } from '../../footer/footer/footer';
-import { ActivatedRoute, RouterLink } from '@angular/router';
+import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -11,7 +11,10 @@ import { CommonModule } from '@angular/common';
   styleUrl: './services-details.css',
 })
 export class ServicesDetails implements OnInit {
-  constructor(private route: ActivatedRoute) {}
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router,
+  ) {}
   serviceId: string | null = '';
 
   serviceData: any;
@@ -284,6 +287,13 @@ export class ServicesDetails implements OnInit {
       ],
     },
   };
+  supportBhogSeva(): void {
+    this.router.navigate(['/contact'], {
+      queryParams: {
+        service: 'Bhog Seva',
+      },
+    });
+  }
 
   festivalCalendar = [
     {

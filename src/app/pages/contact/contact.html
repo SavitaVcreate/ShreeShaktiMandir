@@ -145,15 +145,20 @@
                     </div>
                     <!-- default-form start -->
                     <div class="default-form contact-form">
-                        <form action="contact.php" method="POST" id="contact" novalidate="novalidate">
+                        <form [formGroup]="contactForm" (ngSubmit)="submitContactForm()" id="contact"
+                            novalidate="novalidate">
                             <div class="row">
                                 <div class="col-lg-6 col-md-6">
                                     <div class="form-group">
                                         <div class="field-inner">
-                                            <label for="name">Name*</label>
+                                            <label for="name">Full Name*</label>
                                             <input id="name" class="form-control" name="name" type="text"
-                                                autocomplete="off" placeholder="Ex. name" required="required">
-                                            <span class="error" id="name-error"></span>
+                                                autocomplete="off" placeholder="Ex. Fullname" required="required"
+                                                formControlName="name">
+                                            <span class="error text-danger" *ngIf="contactForm.get('name')?.touched &&
+             contactForm.get('name')?.errors?.['required']">
+                                                FullName is required
+                                            </span>
                                         </div>
                                     </div>
                                 </div>
@@ -163,8 +168,16 @@
                                             <label for="email">Email*</label>
                                             <input id="email" class="form-control" name="email" type="email"
                                                 autocomplete="off" placeholder="Ex. info@example.com"
-                                                required="required">
-                                            <span class="error" id="email-error"></span>
+                                                required="required" formControlName="email">
+                                            <span class="error text-danger" *ngIf="contactForm.get('email')?.touched &&
+             contactForm.get('email')?.errors?.['required']">
+                                                Email is required
+                                            </span>
+
+                                            <span class="error text-danger" *ngIf="contactForm.get('email')?.touched &&
+             contactForm.get('email')?.errors?.['email']">
+                                                Please enter a valid email address
+                                            </span>
                                         </div>
                                     </div>
                                 </div>
@@ -174,8 +187,17 @@
                                             <label for="phone">Phone Number*</label>
                                             <input id="phone" class="form-control" name="phone" type="text"
                                                 autocomplete="off" placeholder="Ex.+44 (0) 9876543210"
-                                                required="required">
-                                            <span class="error" id="phone-error"></span>
+                                                required="required" formControlName="phoneNumber">
+                                            <!-- <span class="error" id="phone-error"></span> -->
+                                            <span class="error text-danger" *ngIf="contactForm.get('phoneNumber')?.touched &&
+             contactForm.get('phoneNumber')?.errors?.['required']">
+                                                Phone number is required
+                                            </span>
+
+                                            <span class="error text-danger" *ngIf="contactForm.get('phoneNumber')?.touched &&
+             contactForm.get('phoneNumber')?.errors?.['pattern']">
+                                                Phone number must be 10 digits
+                                            </span>
                                         </div>
                                     </div>
                                 </div>
@@ -193,11 +215,12 @@
 
                                             <div class="custom-select-wrapper">
                                                 <select id="subject" class="form-control custom-select" name="subject"
-                                                    [(ngModel)]="selectedService">
+                                                    formControlName="enquiryType">
 
                                                     <option value="">Select Enquiry Type</option>
                                                     <option value="General Enquiry">General Enquiry</option>
                                                     <option value="Daily Aarti & Pooja">Daily Aarti & Pooja</option>
+                                                    <option value="Bhog Seva">Bhog Seva</option>
                                                     <option value="Dining Hall">Dining Hall</option>
                                                     <option value="Marriage Ceremony">Marriage Ceremony</option>
                                                     <option value="Yagna & Havan">Yagna & Havan</option>
@@ -207,6 +230,10 @@
 
                                                 <i class="fa-solid fa-angle-down select-icon">
                                                 </i>
+                                                <span class="error text-danger" *ngIf="contactForm.get('enquiryType')?.touched &&
+             contactForm.get('enquiryType')?.errors?.['required']">
+                                                    Please select enquiry type
+                                                </span>
                                             </div>
                                         </div>
 
@@ -218,9 +245,12 @@
                                         <div class="field-inner">
                                             <label for="message">Message*</label>
                                             <textarea id="message" class="form-control" name="message"
-                                                autocomplete="off" placeholder="Ex. type messege"
-                                                required="required"></textarea>
-                                            <span class="error" id="message-error"></span>
+                                                autocomplete="off" placeholder="Ex. type messege" required="required"
+                                                formControlName="message"></textarea>
+                                            <span class="error text-danger" *ngIf="contactForm.get('message')?.touched &&
+             contactForm.get('message')?.errors?.['required']">
+                                                Message is required
+                                            </span>
                                         </div>
                                     </div>
                                 </div>
@@ -236,9 +266,7 @@
                             <div class="ajax-response"></div>
                         </form>
                     </div>
-                    <!-- default-form end -->
                 </div>
-                <!-- contact form box end -->
             </div>
         </div>
     </div>
@@ -265,3 +293,31 @@
 <!-- Google Map end -->
 
 <app-footer></app-footer>
+
+
+<div class="modal fade show" tabindex="-1" *ngIf="isSuccessModal" style="display:block; background:rgba(0,0,0,.5);">
+
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content conatct-form">
+
+            <div class="modal-header">
+                <h5 class="modal-title text-white">{{ modalTitle }}</h5>
+
+                <button type="button" class="btn-close" (click)="isSuccessModal=false">
+                </button>
+            </div>
+
+            <div class="modal-body text-center">
+                <p>{{ modalMessage }}</p>
+            </div>
+
+            <div class="modal-footer justify-content-center">
+                <button class="btn contact-ok" (click)="isSuccessModal=false">
+                    OK
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+</div>

@@ -70,18 +70,6 @@
 
                         <div class="price-wrapper">
 
-                            <div class="price-card" *ngIf="serviceId == 'daily-aarti'">
-
-                                <h3>
-                                    Seva Contribution Start From
-                                </h3>
-
-                                <h4>
-                                    {{ serviceData.charge }}
-                                </h4>
-
-                            </div>
-
                             <div class="price-card" *ngIf="serviceId == 'yagna-havan'">
 
                                 <h3>
@@ -406,6 +394,55 @@
                     </div>
 
                 </div>
+
+            </div>
+            <!-- <div class="bhog-seva-box" *ngIf="serviceId == 'daily-aarti'">
+
+                <h3>Offer Bhog Seva</h3>
+
+                <p>
+                    Bring peace and prosperity to your family by sponsoring the daily Bhog Aarti.
+                </p>
+
+                <ul>
+                    <li>
+                        <strong>Contribution:</strong>
+                        From £21 onwards (as per your wish).
+                    </li>
+                </ul>
+
+                <div class="mt-4">
+                    <button class="theme-button style-1" (click)="supportBhogSeva()">
+
+                        <span>Support Bhog Seva</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </button>
+                </div>
+
+            </div> -->
+
+            <div class="bhog-seva-card" *ngIf="serviceId == 'daily-aarti'">
+
+
+                <h3>Offer Bhog Seva</h3>
+
+                <p>
+                    Bring peace and prosperity to your family by sponsoring the daily Bhog Aarti.
+                </p>
+
+                <div class="contribution-box">
+                    <span>Contribution</span>
+                    <h4>From £21 onwards</h4>
+                    <small>(as per your wish)</small>
+                </div>
+
+                <button class="theme-button style-1 mt-4" (click)="supportBhogSeva()">
+
+                    <span data-text="Support Bhog Seva">Support Bhog Seva</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </button>
 
             </div>
         </div>

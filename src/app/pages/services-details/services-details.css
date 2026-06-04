@@ -1,0 +1,83 @@
+.bhog-seva-card {
+  background: linear-gradient(135deg, #fff8f0, #fff);
+  border: 2px solid rgba(179, 0, 27, 0.12);
+  border-radius: 20px;
+  padding: 40px;
+  margin-top: 40px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(179, 0, 27, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+.bhog-seva-card::before {
+  content: '';
+  position: absolute;
+  top: -80px;
+  right: -80px;
+  width: 180px;
+  height: 180px;
+  background: rgba(179, 0, 27, 0.05);
+  border-radius: 50%;
+}
+
+.bhog-icon {
+  width: 80px;
+  height: 80px;
+  background: #b3001b;
+  color: #fff;
+  border-radius: 50%;
+  margin: 0 auto 20px;
+  font-size: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bhog-seva-card h3 {
+  color: #b3001b;
+  font-size: 34px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.bhog-seva-card p {
+  color: #555;
+  font-size: 18px;
+  line-height: 1.8;
+  max-width: 700px;
+  margin: 0 auto 25px;
+}
+
+.contribution-box {
+  background: #fff;
+  border-left: 5px solid #b3001b;
+  border-radius: 12px;
+  padding: 20px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.contribution-box span {
+  display: block;
+  color: #444;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.contribution-box h4 {
+  color: #b3001b;
+  font-size: 30px;
+  font-weight: 700;
+  margin: 8px 0;
+}
+
+.contribution-box small {
+  color: #444;
+  font-size: 18px;
+}
+
+.bhog-seva-card .theme-button {
+  margin-top: 30px;
+}
