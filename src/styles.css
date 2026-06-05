@@ -6925,7 +6925,7 @@ button:focus {
 }
 .main-menu ul .menu-thumb .nav-link {
   display: inline-block;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 500;
   color: var(--black-color);
   padding: 24px 0;
@@ -7052,7 +7052,7 @@ button:focus {
 }
 .main-menu ul .nav-item .nav-link {
   display: inline-block;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 500;
   color: var(--black-color);
   padding: 24px 0;
@@ -19475,7 +19475,9 @@ button:focus {
     min-height: 750px;
   }
   .hero-content-wrapper {
-    padding-top: 180px;
+    /* padding-top: 180px; */
+    padding-top: 80px;
+    padding-bottom: 80px;
   }
 
   .slider-btn {
