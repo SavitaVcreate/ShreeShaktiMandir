@@ -58,7 +58,7 @@ export class Header {
   slides: string[] = [];
 
   ngOnInit(): void {
-    const isMobile = window.innerWidth <= 767;
+    const isMobile = window.innerWidth <= 991;
 
     this.slides = isMobile
       ? [

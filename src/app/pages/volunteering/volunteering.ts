@@ -66,7 +66,7 @@ export class Volunteering {
       address: ['', Validators.required],
       city: ['', Validators.required],
       country: ['', Validators.required],
-      postCode: ['', Validators.required],
+      zipCode: ['', Validators.required],
 
       subject: ['', Validators.required],
 
@@ -95,7 +95,7 @@ export class Volunteering {
       Address: this.volunteerForm.value.address,
       City: this.volunteerForm.value.city,
       Country: this.volunteerForm.value.country,
-      PostCode: this.volunteerForm.value.postCode,
+      ZipCode: this.volunteerForm.value.zipCode,
       Subject: this.volunteerForm.value.subject,
       Thoughts: this.volunteerForm.value.thoughts,
       Consent: this.volunteerForm.value.consent ? 1 : 0,

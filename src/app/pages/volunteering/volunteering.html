@@ -262,10 +262,10 @@
                             <div class="col-md-6 mb-3">
                                 <label>Post Code *</label>
 
-                                <input type="text" class="form-control" formControlName="postCode"
+                                <input type="text" class="form-control" formControlName="zipCode"
                                     placeholder="Enter post code">
 
-                                <small class="text-danger" *ngIf="f['postCode'].touched && f['postCode'].invalid">
+                                <small class="text-danger" *ngIf="f['zipCode']?.touched && f['zipCode']?.invalid">
                                     Post code is required
                                 </small>
                             </div>

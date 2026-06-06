@@ -99,6 +99,7 @@ body {
   font-size: 16px;
   line-height: 1.6em;
   color: var(--text-color);
+  overflow-x: hidden;
 }
 @media (max-width: 991px) {
   body {
@@ -19241,7 +19242,9 @@ button:focus {
 
 .hero-temple-section {
   position: relative;
-  min-height: 100vh;
+  /* min-height: 100vh;
+  overflow: hidden; */
+  position: relative;
   overflow: hidden;
 }
 
@@ -19347,8 +19350,7 @@ button:focus {
 
 .hero-content-wrapper {
   position: relative;
-  z-index: 5;
-  padding-top: 10px;
+  width: 100%;
 }
 
 .hero-content {
@@ -19462,7 +19464,7 @@ button:focus {
 }
 
 /* RESPONSIVE */
-@media (max-width: 991px) {
+/* @media (max-width: 991px) {
   .hero-content h1 {
     font-size: 52px;
   }
@@ -19475,7 +19477,6 @@ button:focus {
     min-height: 750px;
   }
   .hero-content-wrapper {
-    /* padding-top: 180px; */
     padding-top: 80px;
     padding-bottom: 80px;
   }
@@ -19489,13 +19490,9 @@ button:focus {
 @media (max-width: 767px) {
   .hero-content {
     text-align: start;
-    /* margin-top: 120px; */
     padding: 0;
   }
 
-  /* .hero-btns {
-    justify-content: center;
-  } */
 
   .hero-content h1 {
     font-size: 42px;
@@ -19504,6 +19501,57 @@ button:focus {
   .hero-tag {
     font-size: 13px;
     padding: 10px 18px;
+  }
+} */
+@media (max-width: 767px) {
+  .hero-slide {
+    background-position: center center;
+  } /* First image only */
+  .hero-slide.first-slide {
+    background-position: 82% center;
+  }
+}
+
+/* ================= HERO BASE ================= */
+
+/* row default (desktop) */
+.hero-content-wrapper .row {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* ================= MOBILE FIX ================= */
+@media (max-width: 991px) {
+  .hero-temple-section {
+    min-height: auto;
+  }
+  .hero-content-wrapper .row {
+    flex-direction: column;
+    justify-content: center;
+    min-height: auto !important; /* important fix */
+    padding: 100px 15px 60px;
+  }
+
+  .hero-content-wrapper {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .hero-btns {
+    display: flex;
+    align-items: center;
+    flex-wrap: unset;
+  }
+
+  .hero-btns a {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .min-vh-100 {
+    min-height: auto !important; /* VERY IMPORTANT */
   }
 }
 
