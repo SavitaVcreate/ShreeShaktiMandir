@@ -17,8 +17,8 @@
         "build": {
           "builder": "@angular/build:application",
           "options": {
-            "baseHref": "/demo/",
-            "deployUrl": "/demo/",
+            "baseHref": "/",
+            "deployUrl": "/",
 
             "browser": "src/main.ts",
             "tsConfig": "tsconfig.app.json",
