@@ -58,56 +58,6 @@ export class Contact {
     });
   }
 
-  // submitContactForm(): void {
-  //   if (this.contactForm.invalid) {
-  //     this.contactForm.markAllAsTouched();
-
-  //     this.modalTitle = 'Validation Error';
-  //     this.modalMessage = 'Please fill all required fields correctly before submitting.';
-
-  //     this.isSuccessModal = true;
-
-  //     return;
-  //   }
-  //   const fullName = this.contactForm.value.name.trim();
-  //   const [firstName, ...rest] = fullName.split(' ');
-
-  //   const payload = {
-  //     FirstName: firstName,
-  //     LastName: rest.join(' '),
-  //     EmailId: this.contactForm.value.email,
-  //     PhoneNo: this.contactForm.value.phoneNumber,
-  //     Message: this.contactForm.value.message,
-  //     Subject: this.contactForm.value.enquiryType,
-  //     Address: '',
-  //   };
-
-  //   this.isSubmitting = true;
-
-  //   this.contactService.addContactUs(payload).subscribe({
-  //     next: (res) => {
-  //       this.isSubmitting = false;
-
-  //       this.modalTitle = 'Success';
-  //       this.modalMessage = 'Your enquiry has been submitted successfully.';
-  //       this.isSuccessModal = true;
-
-  //       this.contactForm.reset();
-  //     },
-
-  //     error: (err) => {
-  //       this.isSubmitting = false;
-
-  //       this.modalTitle = 'Error';
-  //       this.modalMessage = err?.error?.message || 'Failed to submit enquiry. Please try again.';
-
-  //       this.isSuccessModal = true;
-
-  //       console.error(err);
-  //     },
-  //   });
-  // }
-
   submitContactForm(): void {
     if (this.contactForm.invalid) {
       this.contactForm.markAllAsTouched();
