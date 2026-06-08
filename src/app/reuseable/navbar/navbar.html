@@ -2,9 +2,11 @@
 <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvas-sidebar">
     <div class="offcanvas-header">
         <div class="offcanvas-logo">
-            <figure>
-                <img src="assets/logo/logo-white.png" alt="offcanvas logo">
-            </figure>
+            <a href="/">
+                <figure>
+                    <img src="assets/logo/logo-white.png" alt="offcanvas logo">
+                </figure>
+            </a>
             <div class="logo-shape">
                 <svg width="139" height="47" viewBox="0 0 139 47" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -17,7 +19,65 @@
                 class="fa-solid fa-xmark"></i></button>
     </div>
     <div class="offcanvas-body">
+        <!-- <div class="mobile-menu">
+        </div> -->
         <div class="mobile-menu">
+            <ul class="mobile-nav">
+
+                <li>
+                    <a routerLink="/">Home</a>
+                </li>
+
+                <li>
+                    <a routerLink="/about-us">About Us</a>
+                </li>
+
+                <li>
+                    <a routerLink="/voluntring">Volunteering</a>
+                </li>
+
+                <li>
+                    <a routerLink="/services">Services</a>
+                </li>
+
+                <li>
+                    <a routerLink="/event">Events</a>
+                </li>
+
+                <!-- Media Dropdown -->
+                <!-- <li class="has-dropdown">
+                    <a href="javascript:void(0)" (click)="toggleMediaMenu()">
+                        Media
+                        <i class="fa-solid fa-angle-down"></i>
+                    </a>
+
+                    <ul class="submenu" *ngIf="isMediaMenuOpen">
+                        <li>
+                            <a routerLink="/gallery">Gallery</a>
+                        </li>
+                    </ul>
+                </li> -->
+
+                <li class="has-dropdown">
+                    <a href="javascript:void(0)" (click)="toggleMediaMenu()">
+                        <span>Media</span>
+
+                        <i class="fa-solid fa-angle-down" [class.rotate]="isMediaMenuOpen">
+                        </i>
+                    </a>
+
+                    <ul class="submenu" *ngIf="isMediaMenuOpen">
+                        <li>
+                            <a routerLink="/gallery">Gallery</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a routerLink="/contact">Contact Us</a>
+                </li>
+
+            </ul>
         </div>
         <div class="offcanvas-about d-none d-xl-block">
             <p>
@@ -37,17 +97,17 @@
                                 <i class="fa-solid fa-location-dot"></i>
                             </div>
                             <div class="offcanvas-cta-content">
+                                <span class="fw-bold">Main Entrance Address</span>
+                                <p>
+                                    70 Moira Street <br>
+                                    Leicester, UK <br>
+                                    LE4 6LA
+                                </p>
                                 <span class="fw-bold">Registered Address</span>
                                 <p>
                                     73 Canon Street <br>
                                     Leicester UK <br>
                                     LE4 6NH
-                                </p>
-                                <span class="fw-bold">Entrance Address</span>
-                                <p>
-                                    70 Moira Street <br>
-                                    Leicester, UK <br>
-                                    LE4 6LA
                                 </p>
                             </div>
                         </div>
@@ -56,7 +116,7 @@
                                 <i class="fa-solid fa-envelope"></i>
                             </div>
                             <div class="offcanvas-cta-content">
-                                <a href="mailto:shaktimandirshree@gmail.com">shaktimandirshree@gmail.com</a>
+                                <a href="mailto:shaktimandir73@gmail.com">shaktimandir73@gmail.com</a>
                             </div>
                         </div>
                         <div class="offcanvas-cta-list">
@@ -64,7 +124,7 @@
                                 <i class="fa-solid fa-phone-volume"></i>
                             </div>
                             <div class="offcanvas-cta-content">
-                                <a href="tel:+44 7438357048">+44 7438357048</a>
+                                <a href="tel:+44 (0) 7438357048">+44 (0) 7438357048</a>
                             </div>
                         </div>
                     </div>
@@ -91,7 +151,7 @@
                                 aria-label="facebook"><i class="fa-brands fa-facebook-f"></i></a>
                         </li>
                         <li>
-                            <a href="#" aria-label="twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                            <a href="#" aria-label="youtube"><i class="fa-brands fa-youtube"></i></a>
                         </li>
                         <li>
                             <a href="https://www.tiktok.com/@shree.shakti.mand?_r=1&_t=ZN-96UZy11bAqE"
@@ -117,7 +177,7 @@
                         <div class="header-left">
                             <div class="logo-box">
                                 <div class="logo">
-                                    <a href="#">
+                                    <a href="/">
                                         <figure>
                                             <img src="assets/logo/logo-white.png" alt="header logo">
                                         </figure>
@@ -149,15 +209,13 @@
                                                 routerLink="/voluntring">Volunteering</a> </li>
                                         <li class="nav-item" routerLinkActive="active-link"> <a class="nav-link"
                                                 routerLink="/services">Services</a> </li>
-                                        <li class="nav-item"> <a class="nav-link" href="#"> Media <i
-                                                    class="fa-solid fa-angle-down"></i> </a>
+                                        <li class="nav-item" routerLinkActive="active-link"> <a class="nav-link"
+                                                routerLink="/event">Events</a> </li>
+                                        <li class="nav-item" routerLinkActive="active-link"> <a class="nav-link"
+                                                href="#"> Media <i class="fa-solid fa-angle-down"></i> </a>
                                             <ul class="submenu">
-                                                <li class="has-dropdown"> <a href="#"> Event <i
-                                                            class="fa-solid fa-chevron-right"></i> </a>
-                                                    <ul class="submenu">
-                                                        <li><a href="#">Event List</a></li>
-                                                        <li><a href="#">Event Details</a></li>
-                                                    </ul>
+                                                <li class="has-dropdown"> <a routerLink="/gallery"> Gallery
+                                                    </a>
                                                 </li>
                                             </ul>
                                         </li>
@@ -171,23 +229,19 @@
 
                         <!-- header right start -->
                         <div class="header-right d-flex align-items-center gap-3">
-                            <!-- header call -->
-                            <div class="header-call">
-                                <div class="header-call-icon">
-                                    <i class="fa-solid fa-phone-volume"></i>
-                                </div>
-                                <div class="header-call-content">
-                                    <span>Call now</span>
-                                    <a href="tel:123446788">+1 234 467 88</a>
-                                </div>
-                            </div>
+
 
                             <!-- button wapper -->
                             <div class="button-wapper">
                                 <!-- header-search -->
                                 <div class="header-search">
-                                    <a href="" class="search-btn" aria-label="search">
+                                    <!-- <a href="" class="search-btn" aria-label="search">
                                         <i class="fa-solid fa-magnifying-glass"></i>
+                                    </a> -->
+                                    <a class="search-btn" aria-label="search" (click)="openSearchModal()">
+
+                                        <i class="fa-solid fa-magnifying-glass"></i>
+
                                     </a>
                                 </div>
                                 <!-- header sidebar  -->
@@ -260,7 +314,7 @@
 
     <a href="#" class="social-icon twitter" target="_blank">
 
-        <i class="fa-brands fa-x-twitter"></i>
+        <i class="fa-brands fa-youtube"></i>
 
     </a>
 
@@ -272,5 +326,38 @@
 
 </div> -->
 
+<!-- SEARCH MODAL -->
+<div class="search-modal" *ngIf="showSearchModal">
 
+    <!-- Overlay -->
+    <div class="search-overlay" (click)="closeSearchModal()">
+    </div>
+
+    <!-- Search Box -->
+    <div class="search-box">
+
+        <!-- Close -->
+        <span class="close-search" (click)="closeSearchModal()">
+
+            &times;
+
+        </span>
+
+        <!-- Input -->
+        <input type="text" placeholder="Search here..." [(ngModel)]="searchText" (input)="filterSearch()">
+
+        <!-- Results -->
+        <div class="search-result-list" *ngIf="searchText">
+
+            <div class="search-item" *ngFor="let item of filteredItems" (click)="navigateTo(item.route)">
+
+                {{ item.name }}
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
 <router-outlet></router-outlet>

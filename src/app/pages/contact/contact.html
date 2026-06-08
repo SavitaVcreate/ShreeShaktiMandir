@@ -10,12 +10,12 @@
                     <!-- breadcrumb content start -->
                     <div class="breadcrumb-content">
                         <!-- breadcrumb title start -->
-                        <div class="breadcrumb-title wow fadeInUp" data-wow-delay=".2s">
+                        <div class="breadcrumb-title">
                             <h1>Contact</h1>
                         </div>
                         <!-- breadcrumb title end -->
                         <!-- nav start -->
-                        <nav aria-label="breadcrumb" class="wow fadeInUp" data-wow-delay=".3s">
+                        <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="#">Home</a></li>
                                 <li class="breadcrumb-item active" aria-current="page">Contact</li>
@@ -40,24 +40,34 @@
 <!-- breadcrumb section end -->
 
 <!-- contact section start -->
-<section class="contact-section pt-100 md-pt-80 md-pb-50">
+<section class="contact-section pt-100 md-pt-80 md-pb-50 pb-50">
     <div class="container">
         <div class="row justify-content-between">
             <div class="col-lg-5">
                 <!-- section title start -->
-                <div class="section-title wow fadeInUp" data-wow-delay=".2s">
+                <div class="section-title wow fade-up">
                     <span class="sub-title">Contact Me</span>
                     <h2>Stay connect with us today</h2>
                 </div>
                 <!-- section title end -->
                 <!-- contact item wrapper start -->
-                <div class="contact-item-wrapper wow fadeInUp" data-wow-delay=".3s">
+                <div class="contact-item-wrapper wow fade-up" data-wow-delay=".3s">
                     <!-- contact items start -->
-                    <div class="contact-item">
+
+                    <!-- <div class="contact-item">
                         <div class="contact-icon"><i class="fa-solid fa-phone-volume"></i></div>
                         <div class="contact-content">
                             <p>Call Now</p>
                             <h3> +44 7438357048</h3>
+                        </div>
+                    </div> -->
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+                        <div class="contact-content">
+                            <p class="main-ent">Main Entrance Address</p>
+                            <h3 class="main-add">70 Moira Street
+                                Leicester, UK
+                                LE4 6LA</h3>
                         </div>
                     </div>
                     <!-- contact items end -->
@@ -71,10 +81,26 @@
                     </div>
                     <!-- contact items end -->
                     <!-- contact items start -->
+                    <!-- <div class="contact-item">
+                        <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+                        <div class="contact-content">
+                            <p>Main Entrance Address</p>
+                            <h3>70 Moira Street
+                                Leicester, UK
+                                LE4 6LA</h3>
+                        </div>
+                    </div> -->
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fa-solid fa-phone-volume"></i></div>
+                        <div class="contact-content">
+                            <p>Call Now</p>
+                            <h3> +44 (0) 7438357048</h3>
+                        </div>
+                    </div>
                     <div class="contact-item">
                         <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
                         <div class="contact-content">
-                            <p>Address</p>
+                            <p>Registered Address</p>
                             <h3>73 Canon Street
                                 Leicester
                                 LE4 6NH United Kingdom</h3>
@@ -95,7 +121,7 @@
                                         aria-label="facebook"><i class="fa-brands fa-facebook-f"></i></a>
                                 </li>
                                 <li>
-                                    <a href="#" aria-label="twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                                    <a href="#" aria-label="youtube"><i class="fa-brands fa-youtube"></i></a>
                                 </li>
                                 <li>
                                     <a href="https://www.tiktok.com/@shree.shakti.mand?_r=1&_t=ZN-96UZy11bAqE"
@@ -119,15 +145,20 @@
                     </div>
                     <!-- default-form start -->
                     <div class="default-form contact-form">
-                        <form action="contact.php" method="POST" id="contact" novalidate="novalidate">
+                        <form [formGroup]="contactForm" (ngSubmit)="submitContactForm()" id="contact"
+                            novalidate="novalidate">
                             <div class="row">
                                 <div class="col-lg-6 col-md-6">
                                     <div class="form-group">
                                         <div class="field-inner">
-                                            <label for="name">Name*</label>
+                                            <label for="name">Full Name*</label>
                                             <input id="name" class="form-control" name="name" type="text"
-                                                autocomplete="off" placeholder="Ex. name" required="required">
-                                            <span class="error" id="name-error"></span>
+                                                autocomplete="off" placeholder="Ex. Fullname" required="required"
+                                                formControlName="name">
+                                            <span class="error text-danger" *ngIf="contactForm.get('name')?.touched &&
+             contactForm.get('name')?.errors?.['required']">
+                                                FullName is required
+                                            </span>
                                         </div>
                                     </div>
                                 </div>
@@ -137,8 +168,16 @@
                                             <label for="email">Email*</label>
                                             <input id="email" class="form-control" name="email" type="email"
                                                 autocomplete="off" placeholder="Ex. info@example.com"
-                                                required="required">
-                                            <span class="error" id="email-error"></span>
+                                                required="required" formControlName="email">
+                                            <span class="error text-danger" *ngIf="contactForm.get('email')?.touched &&
+             contactForm.get('email')?.errors?.['required']">
+                                                Email is required
+                                            </span>
+
+                                            <span class="error text-danger" *ngIf="contactForm.get('email')?.touched &&
+             contactForm.get('email')?.errors?.['email']">
+                                                Please enter a valid email address
+                                            </span>
                                         </div>
                                     </div>
                                 </div>
@@ -147,29 +186,71 @@
                                         <div class="field-inner">
                                             <label for="phone">Phone Number*</label>
                                             <input id="phone" class="form-control" name="phone" type="text"
-                                                autocomplete="off" placeholder="Ex. 9876543210" required="required">
-                                            <span class="error" id="phone-error"></span>
+                                                autocomplete="off" placeholder="Ex.+44 (0) 9876543210"
+                                                required="required" formControlName="phoneNumber">
+                                            <!-- <span class="error" id="phone-error"></span> -->
+                                            <span class="error text-danger" *ngIf="contactForm.get('phoneNumber')?.touched &&
+             contactForm.get('phoneNumber')?.errors?.['required']">
+                                                Phone number is required
+                                            </span>
+
+                                            <span class="error text-danger" *ngIf="contactForm.get('phoneNumber')?.touched &&
+             contactForm.get('phoneNumber')?.errors?.['pattern']">
+                                                Phone number must be 10 digits
+                                            </span>
                                         </div>
                                     </div>
                                 </div>
+
                                 <div class="col-lg-6 col-md-6">
+
                                     <div class="form-group">
+
                                         <div class="field-inner">
-                                            <label for="subject">Subject*</label>
-                                            <input id="subject" class="form-control" name="subject" type="text"
-                                                autocomplete="off" placeholder="Ex. Subject Here" required="required">
-                                            <span class="error" id="subject-error"></span>
+
+                                            <label for="subject">
+                                                Enquiry Type*
+                                            </label>
+
+
+                                            <div class="custom-select-wrapper">
+                                                <select id="subject" class="form-control custom-select" name="subject"
+                                                    formControlName="enquiryType">
+
+                                                    <option value="">Select Enquiry Type</option>
+                                                    <option value="General Enquiry">General Enquiry</option>
+                                                    <option value="Daily Aarti & Pooja">Daily Aarti & Pooja</option>
+                                                    <option value="Bhog Seva">Bhog Seva</option>
+                                                    <option value="Dining Hall">Dining Hall</option>
+                                                    <option value="Marriage Ceremony">Marriage Ceremony</option>
+                                                    <option value="Yagna & Havan">Yagna & Havan</option>
+                                                    <option value="Festival Celebrations">Festival Celebrations</option>
+                                                    <option value="Prasad Seva">Prasad Seva</option>
+                                                </select>
+
+                                                <i class="fa-solid fa-angle-down select-icon">
+                                                </i>
+                                                <span class="error text-danger" *ngIf="contactForm.get('enquiryType')?.touched &&
+             contactForm.get('enquiryType')?.errors?.['required']">
+                                                    Please select enquiry type
+                                                </span>
+                                            </div>
                                         </div>
+
                                     </div>
+
                                 </div>
                                 <div class="col-lg-12">
                                     <div class="form-group">
                                         <div class="field-inner">
                                             <label for="message">Message*</label>
                                             <textarea id="message" class="form-control" name="message"
-                                                autocomplete="off" placeholder="Ex. type messege"
-                                                required="required"></textarea>
-                                            <span class="error" id="message-error"></span>
+                                                autocomplete="off" placeholder="Ex. type messege" required="required"
+                                                formControlName="message"></textarea>
+                                            <span class="error text-danger" *ngIf="contactForm.get('message')?.touched &&
+             contactForm.get('message')?.errors?.['required']">
+                                                Message is required
+                                            </span>
                                         </div>
                                     </div>
                                 </div>
@@ -185,9 +266,7 @@
                             <div class="ajax-response"></div>
                         </form>
                     </div>
-                    <!-- default-form end -->
                 </div>
-                <!-- contact form box end -->
             </div>
         </div>
     </div>
@@ -202,7 +281,7 @@
                 <!-- google map iframe start -->
                 <div class="google-map-iframe">
                     <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2396791.478889806!2d-5.623982693932331!3d54.08054089214548!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x25a3b1142c791a9%3A0xc4f8a0433288257a!2sUnited%20Kingdom!5e0!3m2!1sen!2sin!4v1746685564327!5m2!1sen!2sin"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2420.4376794566792!2d-1.1197208240640353!3d52.652071626443906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48776109811a5641%3A0x7d33c7c5031f028a!2s70%20Moira%20St%2C%20Leicester%2C%20UK!5e0!3m2!1sen!2sin!4v1779873523786!5m2!1sen!2sin"
                         allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
                         title="google map"></iframe>
                 </div>
@@ -214,3 +293,31 @@
 <!-- Google Map end -->
 
 <app-footer></app-footer>
+
+
+<div class="modal fade show" tabindex="-1" *ngIf="isSuccessModal" style="display:block; background:rgba(0,0,0,.5);">
+
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content conatct-form">
+
+            <div class="modal-header">
+                <h5 class="modal-title text-white">{{ modalTitle }}</h5>
+
+                <button type="button" class="btn-close" (click)="isSuccessModal=false">
+                </button>
+            </div>
+
+            <div class="modal-body text-center">
+                <p>{{ modalMessage }}</p>
+            </div>
+
+            <div class="modal-footer justify-content-center">
+                <button class="btn contact-ok" (click)="isSuccessModal=false">
+                    OK
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+</div>
