@@ -8,12 +8,12 @@
                     <!-- breadcrumb content start -->
                     <div class="breadcrumb-content">
                         <!-- breadcrumb title start -->
-                        <div class="breadcrumb-title wow fadeInUp" data-wow-delay=".2s">
+                        <div class="breadcrumb-title">
                             <h1>Donation</h1>
                         </div>
                         <!-- breadcrumb title end -->
                         <!-- nav start -->
-                        <nav aria-label="breadcrumb" class="wow fadeInUp" data-wow-delay=".3s">
+                        <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="#">Home</a></li>
                                 <li class="breadcrumb-item active" aria-current="page">Donation</li>
@@ -41,34 +41,37 @@
                 Make A Meaningful Difference.
                 Every Contribution Will Help To Continue Our Events.</p>
         </div>
-        <div class="row justify-content-center">
-            <div class="col-lg-10">
-                <div class="donation-main-card fade-up"> <!-- Top Header -->
-                    <div class="donation-header">
-                        <div class="donation-header-icon"> <i class="fa-solid fa-hand-holding-heart"></i> </div>
-                        <div> <span class="donation-subtitle"> Support Shree Shakti Mandir UK </span>
-                            <h3>Temple Donation Details</h3>
-                        </div>
-                    </div> <!-- Charity Number -->
-                    <div class="charity-box"> <span>Registered Charity Number</span>
-                        <h2>1145961</h2>
-                    </div> <!-- Bank Details -->
-                    <div class="bank-detail-grid">
-                        <div class="bank-item"> <label>Account Name</label>
-                            <h5>Shree Shakti Mandir Temple</h5>
-                        </div>
-                        <div class="bank-item"> <label>Bank Name</label>
-                            <h5>HSBC</h5>
-                        </div>
-                        <div class="bank-item"> <label>Sort Code</label>
-                            <h5>40-28-06</h5>
-                        </div>
-                        <div class="bank-item"> <label>Account Number</label>
-                            <h5>85423295</h5>
-                        </div>
-                    </div>
+        <div class="row g-4 mt-4 justify-content-center">
+            <!-- Bank Transfer -->
+            <div class="col-lg-4 col-md-6">
+                <div class="donate-card bank-card">
+                    <i class="fa-solid fa-building-columns"></i>
+                    <h4>Bank Transfer</h4>
+                    <p><strong>Account Name :</strong> Shree Shakti Mandir Temple</p>
+                    <p><strong>Bank Name :</strong> HSBC</p>
+                    <p><strong>Sort Code :</strong> 40-28-06</p>
+                    <p><strong>A/C No :</strong> 85423295</p>
                 </div>
             </div>
+
+            <!-- Online Donate -->
+            <!-- <div class="col-lg-4 col-md-6">
+                <a routerLink="/online-donate" class="donate-card action-card">
+                    <i class="fa-solid fa-heart-circle-plus"></i>
+                    <h4>Donate Online</h4>
+                    <span class="online-btn">Secure Online Donation</span>
+                </a>
+            </div> -->
+
+            <!-- UPI Donate -->
+            <!-- <div class="col-lg-4 col-md-6">
+                <a href="#" class="donate-card action-card">
+                    <i class="fa-solid fa-qrcode"></i>
+                    <h4>UPI Donate</h4>
+                    <span class="online-btn">Quick Digital Payment</span>
+                </a>
+            </div> -->
+
         </div>
     </div>
 </section>

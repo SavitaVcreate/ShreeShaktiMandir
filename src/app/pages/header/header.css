@@ -1,8 +1,0 @@
-@media (max-width: 767px) {
-  .hero-slide {
-    background-position: center center;
-  } /* First image only */
-  .hero-slide.first-slide {
-    background-position: 82% center;
-  }
-}

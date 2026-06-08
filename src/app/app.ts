@@ -27,8 +27,7 @@ export class App implements OnInit {
   isLoading: boolean = true;
   isSearchActive: boolean = false;
   marqueeText: string =
-    'Jai Shree Shakti Mata ||  जय श्री शक्ति माता || Jai Shree Shakti Mata || जय श्री शक्ति माता  || Jai Shree Shakti Mata ||  जय श्री शक्ति माता';
-
+    '|| Jai Mata Di || जय माता दी || Jai Mata Di || जय माता दी || Jai Mata Di || जय माता दी ||';
   isPlaying: boolean = false;
   showBackToTop: boolean = false;
 

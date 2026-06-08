@@ -11,9 +11,14 @@
             </div>
         </div> -->
         <div class="hero-slider-container">
-            <div class="hero-slide" *ngFor="let slide of slides; let i = index" [class.active]="i === currentIndex"
+            <!-- <div class="hero-slide" *ngFor="let slide of slides; let i = index" [class.active]="i === currentIndex"
                 [style.background-image]="'url(' + slide + ')'" [ngClass]="{ 'first-slide': i === 0 }"
-                [style.backgroundImage]="'url(' + slide + ')'"> </div>
+                [style.backgroundImage]="'url(' + slide + ')'"> </div> -->
+            <div class="hero-slider-container">
+                <div class="hero-slide" *ngFor="let slide of slides; let i = index" [class.active]="i === currentIndex"
+                    [style.background-image]="'url(' + slide + ')'">
+                </div>
+            </div>
         </div>
     </div>
     <!-- <div class="hero-slider">
@@ -32,7 +37,7 @@
 
                 <div class="hero-content">
                     <span class="hero-tag">
-                        <i class="fa-solid fa-om"></i>
+                        <!-- <i class="fa-solid fa-om"></i> -->
                         Welcome To Shree Shakti Mandir
                     </span>
                     <h1>
@@ -54,6 +59,12 @@
                             Donate Now
                         </a>
 
+
+                    </div>
+                    <div class="mt-3">
+                        <a [routerLink]="['/services-details', 'daily-aarti']" class="theme-btn border-btn">
+                            Join Daily Morning & Evening Aarti
+                        </a>
                     </div>
 
                 </div>
@@ -86,13 +97,13 @@
             <div class="col-lg-12">
                 <!-- section title area start -->
                 <div class="section-title-area">
-                    <div class="section-title text-center fade-left" data-wow-delay=".2s">
+                    <div class="section-title about-history text-center fade-left" data-wow-delay=".2s">
                         <div class="icon m-auto">
                             <figure>
                                 <img src="assets/icon/icon-about-sub-heading.png" alt="icon about sub heading">
                             </figure>
                         </div>
-                        <h2>Know The Real History of Shree Shakti Mandir UK</h2>
+                        <h2>Know The Real History of <br> Shree Shakti Mandir, Leicester UK</h2>
                     </div>
                 </div>
                 <!-- section title area end -->
@@ -113,13 +124,14 @@
                         <ul>
                             <li>Daily Aarti & Spiritual Prayer Ceremonies</li>
                             <li>Grand Celebration of Navratri & Diwali Festivals</li>
-                            <li>Community Service & Charity Programs</li>
+                            <li>Community Center & Service</li>
+                            <li>Charity Programs</li>
                             <li>Teaching Hindu Culture & Spiritual Values</li>
                             <li>Peaceful Place for Meditation & Devotion</li>
                         </ul>
                     </div>
                     <!-- about footer start -->
-                    <div class="about-footer">
+                    <!-- <div class="about-footer">
                         <div class="about-button-wappper">
                             <a href="#" class="theme-button style-1" aria-label="More About">
                                 <span data-text="More About">More About</span>
@@ -135,7 +147,7 @@
                                 <a href="tel:+44 7438357048">+44 7438357048</a>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     <!-- about footer end -->
                 </div>
             </div>
