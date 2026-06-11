@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Navbar } from '../../reuseable/navbar/navbar';
 import { Footer } from '../../footer/footer/footer';
 import { CommonModule } from '@angular/common';
-import { ActivatedRoute, RouterLink } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-event-details',
@@ -112,55 +112,56 @@ export class EventDetails {
       ],
     },
     {
-      id: 4,
+  id: 4,
 
-      slug: 'sidh-shree-baba-balak-nath-ji-ki-chownki',
+  slug: 'sidh-shree-baba-balak-nath-ji-ki-chownki',
 
-      title: 'Sidh Shree Baba Balak Nath Ji Ki Chownki',
+  title: 'Sidh Shree Baba Balak Nath Ji Ki Chownki',
 
-      banner: 'assets/event/baba-balak-nath.jpeg',
+  banner: 'assets/event/baba-balak-nath.jpeg',
 
-      category: 'Spiritual Chownki',
+  category: 'Spiritual Chownki',
 
-      speaker: 'Shree Shakti Mandir',
+  speaker: 'Shree Shakti Mandir',
 
-      date: 'Sunday, 14th June 2026',
+  date: 'Sunday, 14th June 2026',
 
-      time: '04:30 PM to 06:30 PM',
+  time: '04:30 PM to 06:30 PM',
 
-      location: '70 Moira Street, Leicester LE4 6LA',
+  location: '70 Moira Street, Leicester LE4 6LA',
 
-      description:
-        'Shree Shakti Mandir warmly invites all devotees and their families to seek the divine blessings of Sidh Shree Baba Balak Nath Ji on the auspicious occasion of the last Sunday of Adhik Mas. Join us for a spiritually uplifting evening filled with devotion, Baba Ji Ki Chownki, Aarti, Chalisa, and Prasadam.',
+  description:
+    'Shree Shakti Mandir warmly invites all devotees and their families to seek the divine blessings of Sidh Shree Baba Balak Nath Ji on the auspicious occasion of the last Sunday of Adhik Mas. Join us for a spiritually uplifting evening filled with devotion, Baba Ji Ki Chownki, Aarti, Chalisa, and Prasadam.',
 
-      highlights: [
-        'Sidh Shree Baba Balak Nath Ji Ki Chownki',
-        'Baba Ji Ki Aarti',
-        'Hanuman Chalisa & Bhajans',
-        'Family Spiritual Gathering',
-        'Blessings of Baba Balak Nath Ji',
-        'Prasadam Distribution',
-      ],
+  highlights: [
+    'Sidh Shree Baba Balak Nath Ji Ki Chownki',
+    'Baba Ji Ki Aarti',
+    'Hanuman Chalisa & Bhajans',
+    'Family Spiritual Gathering',
+    'Blessings of Baba Balak Nath Ji',
+    'Prasadam Distribution'
+  ],
 
-      schedule: [
-        {
-          activity: 'Sidh Shree Baba Balak Nath Ji Ki Chownki',
-          timing: '04:30 PM - 06:30 PM',
-        },
-        {
-          activity: 'Baba Ji Ki Aarti & Chalisa',
-          timing: '06:30 PM',
-        },
-        {
-          activity: 'Daily Aarti',
-          timing: '07:00 PM',
-        },
-        {
-          activity: 'Prasadam Distribution',
-          timing: 'After Daily Aarti',
-        },
-      ],
+  schedule: [
+    {
+      activity: 'Sidh Shree Baba Balak Nath Ji Ki Chownki',
+      timing: '04:30 PM - 06:30 PM'
     },
+    {
+      activity: 'Baba Ji Ki Aarti & Chalisa',
+      timing: '06:30 PM'
+    },
+    {
+      activity: 'Daily Aarti',
+      timing: '07:00 PM'
+    },
+    {
+      activity: 'Prasadam Distribution',
+      timing: 'After Daily Aarti'
+    }
+  ]
+
+}
   ];
 
   constructor(private route: ActivatedRoute) {}

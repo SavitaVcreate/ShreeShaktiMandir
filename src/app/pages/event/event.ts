@@ -36,7 +36,6 @@ export class Event implements AfterViewInit {
 
     //   button: 'View Details',
     // },
-
     {
       id: 1,
 
@@ -63,22 +62,22 @@ export class Event implements AfterViewInit {
     {
       id: 2,
 
-      slug: 'shree-hanuman-charitra-katha',
+    slug: 'sidh-shree-baba-balak-nath-ji-ki-chownki',
 
-      title: 'Shree Hanuman Charitra Katha',
+    title: 'Sidh Shree Baba Balak Nath Ji Ki Chownki',
 
-      image: 'assets/event/event-2.jpeg',
+    image: 'assets/event/baba-balak-nath.jpeg',
 
-      date: '3 to 5 July 2026',
+    date: '14 June 2026',
 
-      time: '04:00 PM to 08:00 PM',
+    time: '04:30 PM to 06:30 PM',
 
-      location: '70 Moira Street Leicester, UK LE4 6LA',
+    location: '70 Moira Street Leicester, UK LE4 6LA',
 
-      category: 'Hanuman Katha Mahotsav',
+    category: 'Spiritual Chownki',
 
-      description:
-        'Experience the divine life, bhakti, courage, and teachings of Prabhu Hanuman through sacred katha and bhajans.',
+    description:
+      'Shree Shakti Mandir invites all devotees to seek the blessings of Sidh Shree Baba Balak Nath Ji on the auspicious occasion of the last Sunday of Adhik Mas. Join with family and friends for bhajans, aarti, chalisa, and prasadam.',
 
       button: 'View Details',
     },
@@ -113,11 +112,8 @@ export class Event implements AfterViewInit {
       image: 'assets/event/event3.png',
 
       date: '30 & 31 May 2026',
-
       time: '04:30 PM to 06:30 PM',
-
       category: 'Spiritual Satsang',
-
       description:
         'Join the divine spiritual satsang and discover peace, happiness, and devotion through chanting God’s holy name.',
     },
