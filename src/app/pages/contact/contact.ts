@@ -9,9 +9,8 @@ import {
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
-import { ContactUsService } from '../../core/service/contact-us';
 import { CommonModule } from '@angular/common';
-import { ContactUs } from '../../core/models/contact-us';
+import { ContactUsService } from '../../core/service/contact-us';
 
 @Component({
   selector: 'app-contact',
