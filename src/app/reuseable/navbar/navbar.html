@@ -228,25 +228,15 @@
                         <!-- header navigation end -->
 
                         <!-- header right start -->
-                       <!-- header right start -->
-<div class="header-right">
-
-    <!-- Donate Button -->
-    <div class="offcanvas-button-wapper">
-        <a routerLink="/donate" class="theme-button style-1">
-            <span data-text="Donate Now">Donate Now</span>
-            <i class="fa-solid fa-arrow-right"></i>
-        </a>
-    </div>
+                        <!-- <div class="header-right d-flex align-items-center gap-3">
 
     <!-- Search + Menu -->
     <div class="button-wapper">
 
-        <div class="header-search">
-            <a class="search-btn" aria-label="search" (click)="openSearchModal()">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </a>
-        </div>
+                            <div class="button-wapper">
+                                <div class="header-search">
+                               
+                                    <a class="search-btn" aria-label="search" (click)="openSearchModal()">
 
         <div class="header-sidebar">
             <a class="sidebar-toggler"
@@ -260,10 +250,57 @@
             </a>
         </div>
 
-    </div>
+                                    </a>
+                                </div>
+                                <div class="header-sidebar">
+                                    <a class="sidebar-toggler" data-bs-toggle="offcanvas" href="#offcanvas-sidebar"
+                                        aria-label="sidebar toggler" role="button" aria-controls="offcanvas-sidebar">
+                                        <span></span>
+                                        <span></span>
+                                    </a>
+                                </div>
+                            </div>
 
-</div>
-<!-- header right end -->
+                            <div class="header-button">
+                                <a routerLink="/donate" class="theme-button style-1" aria-label="Donate Now">
+                                    <span data-text="Donate Now">Donate Now</span>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div> -->
+
+
+                        <div class="header-right">
+
+                            <!-- Donate Button -->
+                            <div class="offcanvas-button-wapper">
+                                <a routerLink="/donate" class="theme-button style-1">
+                                    <span data-text="Donate Now">Donate Now</span>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </div>
+
+                            <!-- Search + Menu -->
+                            <div class="button-wapper">
+
+                                <div class="header-search">
+                                    <a class="search-btn" aria-label="search" (click)="openSearchModal()">
+                                        <i class="fa-solid fa-magnifying-glass"></i>
+                                    </a>
+                                </div>
+
+                                <div class="header-sidebar">
+                                    <a class="sidebar-toggler" data-bs-toggle="offcanvas" href="#offcanvas-sidebar"
+                                        aria-label="sidebar toggler" role="button" aria-controls="offcanvas-sidebar">
+                                        <span></span>
+                                        <span></span>
+                                    </a>
+                                </div>
+
+                            </div>
+
+                        </div>
+
                     </div>
                 </div>
             </div>

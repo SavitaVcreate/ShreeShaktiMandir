@@ -37,7 +37,30 @@ export class Event implements AfterViewInit {
     //   button: 'View Details',
     // },
     {
-     id: 1,
+      id: 1,
+
+      slug: 'sidh-shree-baba-balak-nath-ji-ki-chownki',
+
+      title: 'Sidh Shree Baba Balak Nath Ji Ki Chownki',
+
+      image: 'assets/event/baba-balak-nath.jpeg',
+
+      date: '14 June 2026',
+
+      time: '04:30 PM to 06:30 PM',
+
+      location: '70 Moira Street Leicester, UK LE4 6LA',
+
+      category: 'Spiritual Chownki',
+
+      description:
+        'Shree Shakti Mandir invites all devotees to seek the blessings of Sidh Shree Baba Balak Nath Ji on the auspicious occasion of the last Sunday of Adhik Mas. Join with family and friends for bhajans, aarti, chalisa, and prasadam.',
+
+      button: 'View Details',
+    },
+
+    {
+      id: 2,
 
     slug: 'sidh-shree-baba-balak-nath-ji-ki-chownki',
 
@@ -56,32 +79,8 @@ export class Event implements AfterViewInit {
     description:
       'Shree Shakti Mandir invites all devotees to seek the blessings of Sidh Shree Baba Balak Nath Ji on the auspicious occasion of the last Sunday of Adhik Mas. Join with family and friends for bhajans, aarti, chalisa, and prasadam.',
 
-    button: 'View Details',
-  },
-
-
-    // {
-    //   id: 2,
-
-    //   slug: 'shree-hanuman-charitra-katha',
-
-    //   title: 'Shree Hanuman Charitra Katha',
-
-    //   image: 'assets/event/event-2.jpeg',
-
-    //   date: '3 to 5 July 2026',
-
-    //   time: '04:00 PM to 08:00 PM',
-
-    //   location: '70 Moira Street Leicester, UK LE4 6LA',
-
-    //   category: 'Hanuman Katha Mahotsav',
-
-    //   description:
-    //     'Experience the divine life, bhakti, courage, and teachings of Prabhu Hanuman through sacred katha and bhajans.',
-
-    //   button: 'View Details',
-    // },
+      button: 'View Details',
+    },
     // {
     //   id: 3,
 
@@ -162,7 +161,8 @@ export class Event implements AfterViewInit {
       description:
         'Celebrate devotional bhajans and seek the divine blessings of Maa Durga with faith.',
     },
-     {
+
+    {
       id: 2,
 
       slug: 'shree-hanuman-charitra-katha',
