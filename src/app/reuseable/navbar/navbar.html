@@ -228,40 +228,42 @@
                         <!-- header navigation end -->
 
                         <!-- header right start -->
-                        <div class="header-right d-flex align-items-center gap-3">
+                       <!-- header right start -->
+<div class="header-right">
 
+    <!-- Donate Button -->
+    <div class="offcanvas-button-wapper">
+        <a routerLink="/donate" class="theme-button style-1">
+            <span data-text="Donate Now">Donate Now</span>
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
+    </div>
 
-                            <!-- button wapper -->
-                            <div class="button-wapper">
-                                <!-- header-search -->
-                                <div class="header-search">
-                                    <!-- <a href="" class="search-btn" aria-label="search">
-                                        <i class="fa-solid fa-magnifying-glass"></i>
-                                    </a> -->
-                                    <a class="search-btn" aria-label="search" (click)="openSearchModal()">
+    <!-- Search + Menu -->
+    <div class="button-wapper">
 
-                                        <i class="fa-solid fa-magnifying-glass"></i>
+        <div class="header-search">
+            <a class="search-btn" aria-label="search" (click)="openSearchModal()">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </a>
+        </div>
 
-                                    </a>
-                                </div>
-                                <!-- header sidebar  -->
-                                <div class="header-sidebar">
-                                    <a class="sidebar-toggler" data-bs-toggle="offcanvas" href="#offcanvas-sidebar"
-                                        aria-label="sidebar toggler" role="button" aria-controls="offcanvas-sidebar">
-                                        <span></span>
-                                        <span></span>
-                                    </a>
-                                </div>
-                            </div>
+        <div class="header-sidebar">
+            <a class="sidebar-toggler"
+                data-bs-toggle="offcanvas"
+                href="#offcanvas-sidebar"
+                aria-label="sidebar toggler"
+                role="button"
+                aria-controls="offcanvas-sidebar">
+                <span></span>
+                <span></span>
+            </a>
+        </div>
 
-                            <!-- header button -->
-                            <div class="header-button">
-                                <a routerLink="/donate" class="theme-button style-1" aria-label="Donate Now">
-                                    <span data-text="Donate Now">Donate Now</span>
-                                    <i class="fa-solid fa-arrow-right"></i>
-                                </a>
-                            </div>
-                        </div>
+    </div>
+
+</div>
+<!-- header right end -->
                     </div>
                 </div>
             </div>

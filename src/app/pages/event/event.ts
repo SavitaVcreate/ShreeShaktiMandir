@@ -36,51 +36,74 @@ export class Event implements AfterViewInit {
 
     //   button: 'View Details',
     // },
-
     {
-      id: 2,
+     id: 1,
 
-      slug: 'shree-hanuman-charitra-katha',
+    slug: 'sidh-shree-baba-balak-nath-ji-ki-chownki',
 
-      title: 'Shree Hanuman Charitra Katha',
+    title: 'Sidh Shree Baba Balak Nath Ji Ki Chownki',
 
-      image: 'assets/event/event-2.jpeg',
+    image: 'assets/event/baba-balak-nath.jpeg',
 
-      date: '3 to 5 July 2026',
+    date: '14 June 2026',
 
-      time: '04:00 PM to 08:00 PM',
+    time: '04:30 PM to 06:30 PM',
 
-      location: '70 Moira Street Leicester, UK LE4 6LA',
+    location: '70 Moira Street Leicester, UK LE4 6LA',
 
-      category: 'Hanuman Katha Mahotsav',
+    category: 'Spiritual Chownki',
 
-      description:
-        'Experience the divine life, bhakti, courage, and teachings of Prabhu Hanuman through sacred katha and bhajans.',
+    description:
+      'Shree Shakti Mandir invites all devotees to seek the blessings of Sidh Shree Baba Balak Nath Ji on the auspicious occasion of the last Sunday of Adhik Mas. Join with family and friends for bhajans, aarti, chalisa, and prasadam.',
 
-      button: 'View Details',
-    },
-    {
-      id: 3,
+    button: 'View Details',
+  },
 
-      slug: 'hari-naam-sankirtan',
 
-      title: 'Hari Naam Sankirtan',
+    // {
+    //   id: 2,
 
-      image: 'assets/event/event-3.jpeg',
+    //   slug: 'shree-hanuman-charitra-katha',
 
-      date: '7 June 2026',
+    //   title: 'Shree Hanuman Charitra Katha',
 
-      time: '04:30 PM to 06:30 PM',
+    //   image: 'assets/event/event-2.jpeg',
 
-      location: '70 Moira Street Leicester, UK LE4 6LA',
+    //   date: '3 to 5 July 2026',
 
-      category: 'Spiritual Kirtan',
+    //   time: '04:00 PM to 08:00 PM',
 
-      description:
-        'Join the divine Hari Naam Sankirtan by ISKCON Leicester and immerse yourself in devotional chanting, bhajans, and spiritual bliss.',
+    //   location: '70 Moira Street Leicester, UK LE4 6LA',
 
-      button: 'View Details',
-    },
+    //   category: 'Hanuman Katha Mahotsav',
+
+    //   description:
+    //     'Experience the divine life, bhakti, courage, and teachings of Prabhu Hanuman through sacred katha and bhajans.',
+
+    //   button: 'View Details',
+    // },
+    // {
+    //   id: 3,
+
+    //   slug: 'hari-naam-sankirtan',
+
+    //   title: 'Hari Naam Sankirtan',
+
+    //   image: 'assets/event/event-3.jpeg',
+
+    //   date: '7 June 2026',
+
+    //   time: '04:30 PM to 06:30 PM',
+
+    //   location: '70 Moira Street Leicester, UK LE4 6LA',
+
+    //   category: 'Spiritual Kirtan',
+
+    //   description:
+    //     'Join the divine Hari Naam Sankirtan by ISKCON Leicester and immerse yourself in devotional chanting, bhajans, and spiritual bliss.',
+
+    //   button: 'View Details',
+    // },
   ];
 
   pastEvents = [
@@ -90,11 +113,8 @@ export class Event implements AfterViewInit {
       image: 'assets/event/event3.png',
 
       date: '30 & 31 May 2026',
-
       time: '04:30 PM to 06:30 PM',
-
       category: 'Spiritual Satsang',
-
       description:
         'Join the divine spiritual satsang and discover peace, happiness, and devotion through chanting God’s holy name.',
     },
@@ -141,6 +161,50 @@ export class Event implements AfterViewInit {
 
       description:
         'Celebrate devotional bhajans and seek the divine blessings of Maa Durga with faith.',
+    },
+     {
+      id: 2,
+
+      slug: 'shree-hanuman-charitra-katha',
+
+      title: 'Shree Hanuman Charitra Katha',
+
+      image: 'assets/event/event-2.jpeg',
+
+      date: '3 to 5 July 2026',
+
+      time: '04:00 PM to 08:00 PM',
+
+      location: '70 Moira Street Leicester, UK LE4 6LA',
+
+      category: 'Hanuman Katha Mahotsav',
+
+      description:
+        'Experience the divine life, bhakti, courage, and teachings of Prabhu Hanuman through sacred katha and bhajans.',
+
+      button: 'View Details',
+    },
+    {
+      id: 3,
+
+      slug: 'hari-naam-sankirtan',
+
+      title: 'Hari Naam Sankirtan',
+
+      image: 'assets/event/event-3.jpeg',
+
+      date: '7 June 2026',
+
+      time: '04:30 PM to 06:30 PM',
+
+      location: '70 Moira Street Leicester, UK LE4 6LA',
+
+      category: 'Spiritual Kirtan',
+
+      description:
+        'Join the divine Hari Naam Sankirtan by ISKCON Leicester and immerse yourself in devotional chanting, bhajans, and spiritual bliss.',
+
+      button: 'View Details',
     },
   ];
   ngAfterViewInit(): void {

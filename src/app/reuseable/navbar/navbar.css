@@ -1,0 +1,78 @@
+/* Desktop */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.button-wapper {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+
+    /* Hide desktop menu */
+    .header-navigation {
+        display: none;
+    }
+
+    /* Header layout */
+    .header-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    /* Right section */
+    .header-right {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: auto;
+        gap: 10px;
+    }
+
+    /* Hide search icon */
+    .header-search {
+        display: none;
+    }
+
+    /* Donate button */
+    .offcanvas-button-wapper {
+        order: 1;
+    }
+
+    .offcanvas-button-wapper .theme-button {
+        padding: 10px 16px;
+        font-size: 14px;
+        white-space: nowrap;
+    }
+
+    /* Menu icon */
+    .button-wapper {
+        order: 2;
+        margin: 0;
+    }
+
+    .header-sidebar {
+        display: flex;
+        align-items: center;
+    }
+
+    .sidebar-toggler {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 4px;
+    }
+
+    .sidebar-toggler span {
+        width: 24px;
+        height: 2px;
+        background: #c00;
+        display: block;
+    }
+}
