@@ -60,28 +60,28 @@ export class Event implements AfterViewInit {
       button: 'View Details',
     },
 
-    // {
-    //   id: 2,
+    {
+      id: 2,
 
-    //   slug: 'shree-hanuman-charitra-katha',
+      slug: 'shree-hanuman-charitra-katha',
 
-    //   title: 'Shree Hanuman Charitra Katha',
+      title: 'Shree Hanuman Charitra Katha',
 
-    //   image: 'assets/event/event-2.jpeg',
+      image: 'assets/event/event-2.jpeg',
 
-    //   date: '3 to 5 July 2026',
+      date: '3 to 5 July 2026',
 
-    //   time: '04:00 PM to 08:00 PM',
+      time: '04:00 PM to 08:00 PM',
 
-    //   location: '70 Moira Street Leicester, UK LE4 6LA',
+      location: '70 Moira Street Leicester, UK LE4 6LA',
 
-    //   category: 'Hanuman Katha Mahotsav',
+      category: 'Hanuman Katha Mahotsav',
 
-    //   description:
-    //     'Experience the divine life, bhakti, courage, and teachings of Prabhu Hanuman through sacred katha and bhajans.',
+      description:
+        'Experience the divine life, bhakti, courage, and teachings of Prabhu Hanuman through sacred katha and bhajans.',
 
-    //   button: 'View Details',
-    // },
+      button: 'View Details',
+    },
     // {
     //   id: 3,
 

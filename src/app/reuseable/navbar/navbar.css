@@ -13,33 +13,28 @@
 
 /* Mobile */
 @media (max-width: 767px) {
-  /* Hide desktop menu */
   .header-navigation {
     display: none;
   }
 
-  /* Header layout */
   .header-content {
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
 
-  /* Right section */
   .header-right {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: auto;
-    gap: 10px;
+    gap: 25px;
   }
 
-  /* Hide search icon */
   .header-search {
     display: none;
   }
 
-  /* Donate button */
   .offcanvas-button-wapper {
     order: 1;
   }
@@ -50,7 +45,6 @@
     white-space: nowrap;
   }
 
-  /* Menu icon */
   .button-wapper {
     order: 2;
     margin: 0;
@@ -73,5 +67,26 @@
     height: 2px;
     background: #c00;
     display: block;
+  }
+}
+/* Small Mobile Devices */
+@media (max-width: 320px) {
+  .header-right {
+    gap: 10px;
+  }
+
+  .offcanvas-button-wapper .theme-button {
+    padding: 8px 12px;
+    font-size: 12px;
+    height: 40px;
+  }
+
+  .sidebar-toggler {
+    width: 40px;
+    height: 40px;
+  }
+
+  .sidebar-toggler span {
+    width: 20px;
   }
 }
